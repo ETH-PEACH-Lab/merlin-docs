@@ -1,6 +1,37 @@
 # Merlin Docs
 
-[toc]
+- [Merlin Docs](#merlin-docs)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Steps to Use the Application](#steps-to-use-the-application)
+    - [Example Workflow](#example-workflow)
+      - [`compiler/`](#compiler)
+      - [`components/`](#components)
+      - [`libs/`](#libs)
+      - [`parser/`](#parser)
+      - [`public/`](#public)
+      - [`App.css`](#appcss)
+      - [`App.jsx`](#appjsx)
+      - [`Theme.js`](#themejs)
+      - [`examples.js`](#examplesjs)
+      - [`index.css`](#indexcss)
+      - [`main.jsx`](#mainjsx)
+    - [**How to Use the Structure**](#how-to-use-the-structure)
+      - [**Best Practices**](#best-practices)
+  - [Domain Specific Language](#domain-specific-language)
+    - [Nearley.js](#nearleyjs)
+      - [Usage of Nearley.js in the Merlin Project](#usage-of-nearleyjs-in-the-merlin-project)
+      - [Key Components Involving Nearley.js](#key-components-involving-nearleyjs)
+      - [Workflow Overview](#workflow-overview)
+      - [Benefits of Using Nearley.js](#benefits-of-using-nearleyjs)
+    - [Usage of Langium in the Merlin Project](#usage-of-langium-in-the-merlin-project)
+      - [Key Features of Langium in the Project](#key-features-of-langium-in-the-project)
+      - [Workflow Overview](#workflow-overview-1)
+      - [Benefits of Using Langium in Merlin](#benefits-of-using-langium-in-merlin)
+  - [Related Projects](#related-projects)
+
 
 ## Overview
 The Merlin Editor is a project developed by the ETH PEACH Lab, designed to provide users more convenient experience for making algorithms visualizations, by extending and integrating the Mermaid diagramming tool into a graphical user interface (GUI). This integration facilitates the creation and visualization of data structures directly within the application using customized domain specific languages (DSL).
