@@ -7,17 +7,6 @@
   - [Usage](#usage)
     - [Steps to Use the Application](#steps-to-use-the-application)
     - [Example Workflow](#example-workflow)
-      - [`compiler/`](#compiler)
-      - [`components/`](#components)
-      - [`libs/`](#libs)
-      - [`parser/`](#parser)
-      - [`public/`](#public)
-      - [`App.css`](#appcss)
-      - [`App.jsx`](#appjsx)
-      - [`Theme.js`](#themejs)
-      - [`examples.js`](#examplesjs)
-      - [`index.css`](#indexcss)
-      - [`main.jsx`](#mainjsx)
     - [**How to Use the Structure**](#how-to-use-the-structure)
       - [**Best Practices**](#best-practices)
   - [Domain Specific Language](#domain-specific-language)
@@ -203,48 +192,48 @@ src/
 
 The `src` directory contains the core files and folders that make up the project. Each entry in this directory serves a specific purpose in the overall structure of the application. Below is a detailed explanation of the structure.
 
-#### `compiler/`
+- `compiler/`
 - Contains the logic responsible for compiling the Domain-Specific Language (DSL) into a target format.
 - **Purpose**: Handles the transformation of user-defined syntax into actionable output for rendering or exporting.
 
-#### `components/`
+- `components/`
 - Includes reusable UI components that can be used across the application.
 - **Examples**: Common elements like headers, footers, buttons, or widgets.
 - **Purpose**: To ensure modularity and reusability of UI elements, making the app easier to maintain and extend.
 
-#### `libs/`
+- `libs/`
 - Contains third-party libraries or internal modules used by the application.
 - **Purpose**: Provides additional functionality not included in the core application logic.
 
-#### `parser/`
+- `parser/`
 - Implements logic for parsing the Merlin DSL or other input formats.
 - **Purpose**: Converts raw user input into a structured format that the application can process.
 
-#### `public/`
+- `public/`
 - Includes static assets such as images, fonts, and other public-facing files.
 - **Purpose**: Provides resources that are directly accessible by the browser or referenced in the project.
 
-#### `App.css`
+- `App.css`
 - Stylesheet for the main `App.jsx` component.
 - **Purpose**: Defines the visual appearance of the main application structure.
 
-#### `App.jsx`
+- `App.jsx`
 - The main component that serves as the entry point for rendering the app's UI.
 - **Purpose**: Sets up the basic structure and renders child components.
 
-#### `Theme.js`
+- `Theme.js`
 - Contains theme-related configurations such as colors, fonts, or global styles.
 - **Purpose**: Provides a centralized way to manage the app's appearance and styling consistency.
 
-#### `examples.js`
+- `examples.js`
 - Contains predefined example scripts or data for testing or showcasing features.
 - **Purpose**: Provides ready-to-use configurations to simplify onboarding and demonstration.
 
-#### `index.css`
+- `index.css`
 - Global stylesheet for the application.
 - **Purpose**: Defines base styles and resets applied across the entire app.
 
-#### `main.jsx`
+- `main.jsx`
 - The main entry point of the application.
 - **Purpose**: Initializes the app and renders the root component into the DOM.
 
