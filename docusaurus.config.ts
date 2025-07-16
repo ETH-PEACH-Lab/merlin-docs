@@ -66,7 +66,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/merlin-social-card.jpg',
+    image: 'img/merlin-social-card.png',
     navbar: {
       title: 'Merlin',
       logo: {
