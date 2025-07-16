@@ -1,0 +1,92 @@
+.mermaidViewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.mermaidViewer.bordered {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diagramContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.diagramContainer svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.loadingSpinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-top: 2px solid var(--ifm-color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  background-color: var(--ifm-color-danger-contrast-background);
+  border: 1px solid var(--ifm-color-danger);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem;
+  color: var(--ifm-color-danger-dark);
+}
+
+.error strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.error pre {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Ensure the component looks good in both light and dark modes */
+[data-theme='dark'] .mermaidViewer {
+  background-color: #ffffff;
+}
+
+[data-theme='dark'] .mermaidViewer.bordered {
+  border-color: var(--ifm-color-emphasis-600);
+}
+
+/* Force light background for the diagram area regardless of theme */
+.mermaidViewer .diagramContainer {
+  background-color: #ffffff;
+  border-radius: 4px;
+}

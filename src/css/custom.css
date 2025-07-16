@@ -1,0 +1,114 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #7e32b9;
+  --ifm-color-primary-dark: #6b2a9f;
+  --ifm-color-primary-darker: #5a2286;
+  --ifm-color-primary-darkest: #481a6c;
+  --ifm-color-primary-light: #8f3ec6;
+  --ifm-color-primary-lighter: #a94fd8;
+  --ifm-color-primary-lightest: #c26df0;
+  --ifm-color-secondary: #ffffff;
+  --ifm-color-secondary-dark: #f0f0f0;
+  --ifm-color-secondary-darker: #e0e0e0;
+  --ifm-color-secondary-darkest: #d0d0d0;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #a94fd8;
+  --ifm-color-primary-dark: #8f3ec6;
+  --ifm-color-primary-darker: #7e32b9;
+  --ifm-color-primary-darkest: #6b2a9f;
+  --ifm-color-primary-light: #c26df0;
+  --ifm-color-primary-lighter: #d98ff0;
+  --ifm-color-primary-lightest: #f0c2f0;
+  --ifm-color-secondary: #ffffff;
+  --ifm-color-secondary-dark: #f0f0f0;
+  --ifm-color-secondary-darker: #e0e0e0;
+  --ifm-color-secondary-darkest: #d0d0d0;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Merlin Language Syntax Highlighting */
+/* Light theme */
+:root {
+  --merlin-keyword: #6f42c1;
+  --merlin-component: #008080;
+  --merlin-attribute: #008080;
+  --merlin-positional: #008080;
+  --merlin-command: #008080;
+  --merlin-variable: #0969da;
+  --merlin-number: #0550ae;
+  --merlin-string: #0a3069;
+  --merlin-comment: #6e7781;
+  --merlin-symbol: #24292f;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+  --merlin-keyword: #8477fd;
+  --merlin-component: #21ffd6;
+  --merlin-attribute: #21ffd6;
+  --merlin-positional: #21ffd6;
+  --merlin-command: #21ffd6;
+  --merlin-variable: #50c1f9;
+  --merlin-number: #b5cea8;
+  --merlin-string: #3ae1ff;
+  --merlin-comment: #6a9955;
+  --merlin-symbol: #ffffff;
+}
+
+/* Apply Merlin syntax highlighting */
+.token.keyword {
+  color: var(--merlin-keyword) !important;
+  font-weight: bold;
+}
+
+.token.component {
+  color: var(--merlin-component) !important;
+  font-weight: 500;
+}
+
+.token.attribute {
+  color: var(--merlin-attribute) !important;
+}
+
+.token.positional {
+  color: var(--merlin-positional) !important;
+}
+
+.token.dot-command {
+  color: var(--merlin-command) !important;
+  font-weight: 600;
+}
+
+.token.variable {
+  color: var(--merlin-variable) !important;
+}
+
+.token.number {
+  color: var(--merlin-number) !important;
+}
+
+.token.string {
+  color: var(--merlin-string) !important;
+  font-weight: bold;
+}
+
+.token.comment {
+  color: var(--merlin-comment) !important;
+  font-style: italic;
+}
+
+.token.symbol {
+  color: var(--merlin-symbol) !important;
+}

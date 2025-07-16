@@ -1,0 +1,213 @@
+.sideBySide {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-border-radius);
+  overflow: hidden;
+  margin: 1rem 0;
+  min-height: 400px;
+}
+
+.sideBySide.dragging {
+  cursor: col-resize;
+}
+
+.sideBySide.dragging * {
+  pointer-events: none;
+}
+
+.codeSection {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.diagramSection {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ifm-background-surface-color);
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  padding: 0.5rem 1rem;
+  background-color: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.headerButtons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.headerButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: var(--ifm-border-radius);
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.headerButton:hover {
+  background-color: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-500);
+}
+
+.headerButton:active {
+  transform: translateY(1px);
+}
+
+.copyButton.copied {
+  background-color: var(--ifm-color-success-light);
+  border-color: var(--ifm-color-success);
+  color: var(--ifm-color-success-dark);
+}
+
+.playgroundButton:hover {
+  background-color: var(--ifm-color-primary-light);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-dark);
+}
+
+.codeWrapper {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0; /* Important for flex child to shrink */
+}
+
+.codeWrapper > div {
+  flex: 1 1 auto;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.codeWrapper pre {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  flex: 1 1 auto !important;
+  overflow: auto !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--ifm-color-emphasis-300);
+  flex-shrink: 0;
+}
+
+.resizeDivider {
+  cursor: col-resize;
+  width: 4px;
+  background-color: var(--ifm-color-emphasis-300);
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.resizeDivider:hover {
+  background-color: var(--ifm-color-primary);
+}
+
+.resizeDivider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  background: transparent;
+}
+
+.diagramWrapper {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.mermaidDiagram {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sideBySide {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .sideBySide.resizable {
+    user-select: auto;
+  }
+  
+  .divider,
+  .resizeDivider {
+    width: 100%;
+    height: 1px;
+    cursor: default;
+  }
+  
+  .resizeDivider:hover {
+    background-color: var(--ifm-color-emphasis-300);
+  }
+  
+  .codeSection,
+  .diagramSection {
+    min-width: auto;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .headerButtons {
+    align-self: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .headerButton {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
