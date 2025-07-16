@@ -104,7 +104,7 @@ text label = {
 
 ## Methods and Operations
 
-Merlin provides a rich set of methods for manipulating data structures. For a complete reference of all available methods, see the **[Methods Reference](./data-structures/methods.md)**.
+Merlin provides a rich set of methods for manipulating data structures. For a complete reference of all available methods, see the **[Methods Reference](./methods.md)**.
 
 ### Common Method Categories
 - **Setters**: `setColor`, `setValue`, `setArrow`, `setHidden`, etc.
