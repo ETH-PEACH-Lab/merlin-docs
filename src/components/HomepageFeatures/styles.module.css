@@ -1,0 +1,16 @@
+.featureSvgSmall {
+  max-width: 120px;
+  max-height: 120px;
+  margin: 0 auto;
+}
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
