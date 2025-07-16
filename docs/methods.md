@@ -59,7 +59,20 @@ Sets the value at a specific index.
 obj.setValue(0, "newValue")
 ```
 
-**Supported by:** Array, Stack, LinkedList, Graph, Tree
+**Supported by:** Array, Stack
+
+---
+
+### `setValue(index | id, value)`
+Sets the value at a specific index or node ID.
+
+**Syntax:**
+```merlin
+obj.setValue(0, "newValue")        // by index
+obj.setValue(nodeA, "newValue")    // by node ID
+```
+
+**Supported by:** Graph, Tree, LinkedList
 
 ---
 
@@ -84,7 +97,21 @@ obj.setColor(0, "red")
 obj.setColor(0, null)  // remove color
 ```
 
-**Supported by:** Array, Stack, LinkedList, Graph, Tree
+**Supported by:** Array, Stack
+
+---
+
+### `setColor(index | id, color)`
+Sets the color at a specific index or node ID.
+
+**Syntax:**
+```merlin
+obj.setColor(0, "red")             // by index
+obj.setColor(nodeA, "red")         // by node ID
+obj.setColor(nodeA, null)          // remove color
+```
+
+**Supported by:** Graph, Tree, LinkedList
 
 ---
 
@@ -109,7 +136,21 @@ obj.setArrow(0, "important")
 obj.setArrow(0, null)  // remove arrow
 ```
 
-**Supported by:** Array, Stack, LinkedList, Graph, Tree
+**Supported by:** Array, Stack
+
+---
+
+### `setArrow(index | id, arrow)`
+Sets the arrow/label at a specific index or node ID.
+
+**Syntax:**
+```merlin
+obj.setArrow(0, "important")       // by index
+obj.setArrow(nodeA, "important")   // by node ID
+obj.setArrow(nodeA, null)          // remove arrow
+```
+
+**Supported by:** Graph, Tree, LinkedList
 
 ---
 
@@ -125,13 +166,15 @@ matrix.setArrow(1, 2, "target")
 
 ---
 
-### `setHidden(index, hidden)`
-Sets the visibility of an element.
+### `setHidden(index | id, hidden)`
+Sets the visibility of an element by index or node ID.
 
 **Syntax:**
 ```merlin
-graph.setHidden(0, true)   // hide
-graph.setHidden(0, false)  // show
+graph.setHidden(0, true)        // hide by index
+graph.setHidden(0, false)       // show by index
+graph.setHidden(nodeA, true)    // hide by node ID
+graph.setHidden(nodeA, false)   // show by node ID
 ```
 
 **Supported by:** Graph
@@ -153,7 +196,7 @@ obj.setValues([_, 2, _])  // only change middle value
 
 ---
 
-### `setValues([[...], [...]])`
+### `setValues([[...], ...])`
 Sets multiple matrix values at once.
 
 **Syntax:**
@@ -179,7 +222,7 @@ obj.setColors([_, "blue", _])  // only change middle color
 
 ---
 
-### `setColors([[...], [...]])`
+### `setColors([[...], ...])`
 Sets multiple matrix colors at once.
 
 **Syntax:**
@@ -204,7 +247,7 @@ obj.setArrows([_, null, _])  // only change middle arrow
 
 ---
 
-### `setArrows([[...], [...]])`
+### `setArrows([[...], ...])`
 Sets multiple matrix arrows at once.
 
 **Syntax:**
@@ -693,10 +736,10 @@ text.setAligns(["left", "center", "right"])
 
 | Data Structure | setValue | setColor | setArrow | add/insert | remove | Special Methods |
 |---------------|----------|----------|----------|------------|--------|----------------|
-| Array | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| Array | ✓ (index) | ✓ (index) | ✓ (index) | ✓ | ✓ | - |
 | Matrix | ✓ (2D) | ✓ (2D) | ✓ (2D) | - | - | addRow, addColumn, addBorder |
-| Graph | ✓ | ✓ | ✓ | ✓ | ✓ | setHidden, addEdge, setEdges |
-| Tree | ✓ | ✓ | ✓ | ✓ | ✓ | addChild, setChild, removeSubtree |
-| Stack | ✓ | ✓ | ✓ | ✓ | ✓ | - |
-| LinkedList | ✓ | ✓ | ✓ | ✓ | ✓ | addNode, insertNode |
+| Graph | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | setHidden (index/id), addEdge, setEdges |
+| Tree | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | addChild, setChild, removeSubtree |
+| Stack | ✓ (index) | ✓ (index) | ✓ (index) | ✓ | ✓ | - |
+| LinkedList | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | addNode, insertNode |
 | Text | ✓ | ✓ | - | - | - | Font methods, alignment, sizing |
