@@ -22,7 +22,7 @@ importers:
         version: 3.8.1(@docusaurus/plugin-content-docs@3.8.1(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@19.1.0))(acorn@8.15.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.6.3))(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@19.1.0))(acorn@8.15.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.6.3)
       '@eth-peach-lab/merlin':
         specifier: github:ETH-PEACH-Lab/merlin#main
-        version: onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/8fc4dc83437effa97744d0b569745d68b2e434ae(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.2)
+        version: onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/67f2a81a9cdab08ca8f4358901663ea0bc98fa4a(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.1)
       '@eth-peach-lab/mermaid-merlin':
         specifier: github:ETH-PEACH-Lab/mermaid-merlin#develop
         version: mermaid-monorepo@https://codeload.github.com/ETH-PEACH-Lab/mermaid-merlin/tar.gz/60ceb91a2b7a766872b6326f0cc7f511317396f4
@@ -6032,8 +6032,8 @@ packages:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
 
-  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/8fc4dc83437effa97744d0b569745d68b2e434ae:
-    resolution: {tarball: https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/8fc4dc83437effa97744d0b569745d68b2e434ae}
+  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/67f2a81a9cdab08ca8f4358901663ea0bc98fa4a:
+    resolution: {tarball: https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/67f2a81a9cdab08ca8f4358901663ea0bc98fa4a}
     version: 6.1.0
     engines: {node: '>=18.16'}
 
@@ -10129,7 +10129,7 @@ snapshots:
       postcss-preset-env: 10.2.4(postcss@8.5.6)
       terser-webpack-plugin: 5.3.14(webpack@5.100.1)
       tslib: 2.8.1
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.100.2))(webpack@5.100.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.100.1))(webpack@5.100.1)
       webpack: 5.100.1
       webpackbar: 6.0.1(webpack@5.100.1)
     transitivePeerDependencies:
@@ -10250,7 +10250,7 @@ snapshots:
       tslib: 2.8.1
       unified: 11.0.5
       unist-util-visit: 5.0.0
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.100.2))(webpack@5.100.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.100.1))(webpack@5.100.1)
       vfile: 6.0.3
       webpack: 5.100.1
     transitivePeerDependencies:
@@ -10871,7 +10871,7 @@ snapshots:
       prompts: 2.4.2
       resolve-pathname: 3.0.0
       tslib: 2.8.1
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.100.2))(webpack@5.100.1)
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.100.1))(webpack@5.100.1)
       utility-types: 3.11.0
       webpack: 5.100.1
     transitivePeerDependencies:
@@ -11465,7 +11465,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.17(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.2)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.17(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.1))(webpack@5.100.2)':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.44.0
@@ -11480,7 +11480,7 @@ snapshots:
       type-fest: 2.19.0
       webpack-dev-server: 4.15.2(webpack@5.100.2)
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.17(react-refresh@0.14.2)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.2)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.17(react-refresh@0.14.2)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.1))(webpack@5.100.1)':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.44.0
@@ -11490,7 +11490,7 @@ snapshots:
       react-refresh: 0.14.2
       schema-utils: 4.3.2
       source-map: 0.7.4
-      webpack: 5.100.2
+      webpack: 5.100.1
     optionalDependencies:
       type-fest: 2.19.0
       webpack-dev-server: 4.15.2(webpack@5.100.2)
@@ -16828,7 +16828,7 @@ snapshots:
     dependencies:
       mimic-fn: 2.1.0
 
-  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/8fc4dc83437effa97744d0b569745d68b2e434ae(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.2):
+  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/67f2a81a9cdab08ca8f4358901663ea0bc98fa4a(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react@19.1.0)
@@ -16838,7 +16838,7 @@ snapshots:
       '@mui/icons-material': 5.18.0(@mui/material@5.18.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@19.1.8)(react@18.3.1)
       '@mui/lab': 5.0.0-alpha.177(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react@18.3.1))(@mui/material@5.18.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react@19.1.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mui/material': 5.18.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.17(react-refresh@0.14.2)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.2)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.17(react-refresh@0.14.2)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.1))(webpack@5.100.1)
       downloadjs: 1.4.7
       html-to-image: 1.11.13
       jspdf: 2.5.2
@@ -18174,7 +18174,7 @@ snapshots:
   react-scripts@5.0.1(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(eslint@8.57.1)(react@18.3.1)(type-fest@2.19.0)(typescript@5.6.3):
     dependencies:
       '@babel/core': 7.28.0
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.17(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.2))(webpack@5.100.2)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.17(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.1))(webpack@5.100.2)
       '@svgr/webpack': 5.5.0
       babel-jest: 27.5.1(@babel/core@7.28.0)
       babel-loader: 8.4.1(@babel/core@7.28.0)(webpack@5.100.2)
@@ -19473,14 +19473,14 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-loader@4.1.1(file-loader@6.2.0(webpack@5.100.2))(webpack@5.100.1):
+  url-loader@4.1.1(file-loader@6.2.0(webpack@5.100.1))(webpack@5.100.1):
     dependencies:
       loader-utils: 2.0.4
       mime-types: 2.1.35
       schema-utils: 3.3.0
       webpack: 5.100.1
     optionalDependencies:
-      file-loader: 6.2.0(webpack@5.100.2)
+      file-loader: 6.2.0(webpack@5.100.1)
 
   url-parse@1.5.10:
     dependencies:
@@ -19600,15 +19600,6 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  webpack-dev-middleware@5.3.4(webpack@5.100.1):
-    dependencies:
-      colorette: 2.0.20
-      memfs: 3.5.3
-      mime-types: 2.1.35
-      range-parser: 1.2.1
-      schema-utils: 4.3.2
-      webpack: 5.100.1
-
   webpack-dev-middleware@5.3.4(webpack@5.100.2):
     dependencies:
       colorette: 2.0.20
@@ -19648,7 +19639,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 5.3.4(webpack@5.100.1)
+      webpack-dev-middleware: 5.3.4(webpack@5.100.2)
       ws: 8.18.3
     optionalDependencies:
       webpack: 5.100.1
