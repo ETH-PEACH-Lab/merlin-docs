@@ -110,6 +110,26 @@ const config: Config = {
               label: 'Getting Started',
               to: '/docs/getting-started',
             },
+            {
+              label: 'Language Reference',
+              to: '/docs/language-reference',
+            },
+            {
+              label: 'Data Structures',
+              to: '/docs/data-structures',
+            },
+            {
+              label: 'Positioning',
+              to: '/docs/positioning',
+            },
+            {
+              label: 'Types Reference',
+              to: '/docs/types',
+            },
+            {
+              label: 'Methods',
+              to: '/docs/methods',
+            },
           ],
         },
         {
