@@ -344,3 +344,11 @@ Langium is a framework for building domain-specific languages (DSLs) and their a
 `Merlin` project repo: https://github.com/ETH-PEACH-Lab/merlin  
 `Merlin` Tutorial repo: https://github.com/ETH-PEACH-Lab/intuition-vis-tutorial  
 `Mermaid` Extension repo: https://github.com/ETH-PEACH-Lab/mermaid-merlin/tree/develop
+
+## Acknowledgements & Contributors
+
+Contributors (sorted by first name):
+
+- **Megan Marty** ([GitHub](https://github.com/megan-marty))
+- **Shu Wang** ([LinkedIn](https://www.linkedin.com/in/shu-wang-488bb5138/), [GitHub](https://github.com/rainintime7))
+- **Silvan Metzker** ([LinkedIn](https://www.linkedin.com/in/silvan-metzker-515ab9200), [GitHub](https://github.com/Silvan-M))
