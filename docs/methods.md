@@ -293,7 +293,7 @@ Inserts a value at a specific index.
 obj.insertValue(1, "inserted")
 ```
 
-**Supported by:** Array, Stack, LinkedList
+**Supported by:** Array, Stack
 
 ---
 
@@ -310,12 +310,15 @@ graph.addNode(newNode)  // no value
 
 ---
 
-### `insertNode(index, name)`
-Inserts a node at a specific index.
+### `insertNode(index | id, name, value?)`
+Inserts a node at a specific index or after a specific node ID with optional value.
 
 **Syntax:**
 ```merlin
-list.insertNode(1, newNode)
+list.insertNode(1, newNode)           // by index
+list.insertNode(1, newNode, "value")  // by index with value
+list.insertNode(nodeA, newNode)       // after node ID
+list.insertNode(nodeA, newNode, "value") // after node ID with value
 ```
 
 **Supported by:** LinkedList
@@ -328,18 +331,6 @@ Adds an edge between nodes.
 **Syntax:**
 ```merlin
 graph.addEdge(nodeA-nodeB)
-```
-
-**Supported by:** Graph
-
----
-
-### `insertEdge(index, edge)`
-Inserts an edge at a specific index.
-
-**Syntax:**
-```merlin
-graph.insertEdge(1, nodeA-nodeB)
 ```
 
 **Supported by:** Graph
