@@ -47,7 +47,7 @@ LinkedLists support these methods for manipulation:
 
 ### Node Methods
 - `addNode(name, value?)` - Add new node with optional value
-- `insertNode(index, name)` - Insert node at specific position
+- `insertNode(index | id, name, value?)` - Insert node at specific position or after node ID with optional value
 - `removeNode(name)` - Remove specific node
 - `setValue(index | id, value)` - Set value for node at index or node id
 - `setColor(index | id, color)` - Set color for node at index or node id
@@ -55,7 +55,6 @@ LinkedLists support these methods for manipulation:
 
 ### Value Methods
 - `addValue(value)` - Add value to end of list
-- `insertValue(index | id, value)` - Insert value at specific position or node id
 - `removeValue(value)` - Remove first occurrence of value
 - `removeAt(index)` - Remove node at specific position
 
@@ -124,10 +123,14 @@ list.setColor(2, "green")
 list.setArrow(2, "new")
 
 page
-list.insertNode(1, n1_5)
-list.setValues([10, 15, 20, 30])
+list.insertNode(1, n1_5, 15)  // insert by index
 list.setColors([null, "blue", null, "green"])
 list.setArrows([null, "inserted", null, null])
+
+page
+list.insertNode(n1_5, n1_75, 17.5)  // insert after node ID
+list.setColors([null, "blue", "yellow", null, "green"])
+list.setArrows([null, "inserted", "after n1_5", null, null])
 
 page
 list.removeNode(n2)
@@ -195,8 +198,7 @@ page
 show sorted
 
 page
-sorted.insertNode(1, n25)
-sorted.setValues([10, 25, 30, 50])
+sorted.insertNode(n10, n25, 25)  // insert after n10 node
 sorted.setColor(1, "red")
 sorted.setArrow(1, "inserted")
 `}
