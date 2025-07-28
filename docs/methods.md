@@ -440,27 +440,26 @@ tree.removeSubtree(nodeToRemove)
 
 ## Matrix-Specific Methods
 
-### `addRow(values?)`
+### `addRow([values]?)`
 Adds a new row to the matrix.
 
 **Syntax:**
 ```merlin
-matrix.addRow()           // empty row
-matrix.addRow([1, 2, 3])  // row with values
+matrix.addRow()             // empty row at end
+matrix.addRow([1, 2, 3])    // row with values at end
 ```
 
 **Supported by:** Matrix
 
 ---
 
-### `addColumn(position?, values?)`
+### `addColumn([values]?)`
 Adds a new column to the matrix.
 
 **Syntax:**
 ```merlin
-matrix.addColumn()        // add at end
-matrix.addColumn(1)       // add at position 1
-matrix.addColumn(1, [1, 2, 3])  // with values
+matrix.addColumn()             // empty column at end
+matrix.addColumn([4, 5, 6])    // column with values at end
 ```
 
 **Supported by:** Matrix
@@ -484,20 +483,33 @@ Removes a column at the specified index.
 
 **Syntax:**
 ```merlin
-matrix.removeColumn(2)
+matrix.removeRow(1)
+```
+
+**Supported by:** Matrix
+
+--- 
+
+### `insertRow(index, [values]?)`
+Inserts a row at a specific index with optional values.
+
+**Syntax:**
+```merlin
+matrix.insertRow(1)             // empty row at index 1
+matrix.insertRow(1, [4, 5, 6])  // row with values at index 1
 ```
 
 **Supported by:** Matrix
 
 ---
 
-### `addBorder(value, color?)`
-Adds a border around the matrix.
+### `insertColumn(index, [values]?)`
+Inserts a column at a specific index with optional values.
 
 **Syntax:**
 ```merlin
-matrix.addBorder(0)           // border with value 0
-matrix.addBorder(0, "gray")   // border with color
+matrix.insertColumn(1)             // empty column at index 1
+matrix.insertColumn(1, [4, 5, 6])  // row with values at index 1
 ```
 
 **Supported by:** Matrix

@@ -54,11 +54,13 @@ Matrices support these methods for manipulation:
 - `setArrows([[...], ...])` - Set multiple arrows
 
 ### Structural Methods
-- `addRow(values?)` - Add new row (optionally with values)
-- `addColumn(position?, values?)` - Add new column at position
-- `removeRow(index)` - Remove row at index
-- `removeColumn(index)` - Remove column at index
-- `addBorder(value, color?)` - Add border around matrix
++ `addRow([values]?)` - Add new row (optionally with values)
++ `addColumn([values]?)` - Add new column (optionally with values)
++ `insertRow(index, [values]?)` - Insert row at specific index with optional values
++ `insertColumn(index, [values]?)` - Insert column at specific index with optional values
++ `removeRow(index)` - Remove row at index
++ `removeColumn(index)` - Remove column at index
++ `addBorder(value, color?)` - Add border around matrix
 
 ## Examples
 
