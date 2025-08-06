@@ -60,7 +60,13 @@ Text elements support the following properties:
 
 Text elements support these methods for manipulation:
 
+:::info
+Text objects do not support the `setText()` method since they are text themselves. Use `setValue()`, `setFontSize()`, and other text-specific methods instead.
+:::
+
 ### Single Property Methods
+- `setValue(value)` - Set text content for all lines  
+- `setValue(line, value)` - Set text content for specific line
 - `setFontSize(value)` - Set font size for all text
 - `setFontSize(line, size)` - Set font size for specific line
 - `setColor(line, color)` - Set color for specific line
@@ -75,6 +81,7 @@ Text elements support these methods for manipulation:
 - `setHeight(height)` - Set text box height
 
 ### Multiple Element Methods
+- `setValues([...])` - Set text content for multiple lines
 - `setFontSizes([...])` - Set font sizes for multiple lines
 - `setColors([...])` - Set colors for multiple lines
 - `setFontWeights([...])` - Set font weights for multiple lines
@@ -149,6 +156,35 @@ page
 status.setColor(0, "green")
 status.setValue(0, "Status: Complete")
 status.setFontWeight("bold")
+`}
+</SideBySide>
+
+### Multiple Lines with setValues
+
+<SideBySide 
+  language="merlin"
+  bordered={true}
+  diagramWidth={400}
+  diagramHeight={300}
+  overrideSize={true}
+>
+{`
+text progress = {
+    value: ["Step 1: Initialize", "Step 2: Process", "Step 3: Complete"]
+    fontSize: 14
+    color: ["gray", "gray", "gray"]
+}
+
+page
+show progress
+
+page
+progress.setValues(["Step 1: Initialize ✓", "Step 2: Process...", "Step 3: Complete"])
+progress.setColors(["green", "orange", "gray"])
+
+page
+progress.setValues(["Step 1: Initialize ✓", "Step 2: Process ✓", "Step 3: Complete ✓"])
+progress.setColors(["green", "green", "green"])
 `}
 </SideBySide>
 

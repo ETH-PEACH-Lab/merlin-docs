@@ -45,6 +45,9 @@ LinkedLists support the following properties:
 
 LinkedLists support these methods for manipulation:
 
+### Text Positioning Methods
+- `setText(text, position)` - Set or remove text at specific positions (`"above"`, `"below"`, `"left"`, `"right"`)
+
 ### Node Methods
 - `addNode(name, value?)` - Add new node with optional value
 - `insertNode(index | id, name, value?)` - Insert node at specific position or after node ID with optional value

@@ -43,6 +43,9 @@ Matrices support the following properties:
 
 Matrices support these methods for manipulation:
 
+### Text Positioning Methods
+- `setText(text, position)` - Set or remove text at specific positions (`"above"`, `"below"`, `"left"`, `"right"`)
+
 ### Single Element Methods
 - `setValue(row, col, value)` - Set value at specific position
 - `setColor(row, col, color)` - Set color at specific position
@@ -168,6 +171,38 @@ matrix myMatrix = {
 
 page
 show myMatrix
+`}
+</SideBySide>
+
+### Dynamic Text with setText
+
+<SideBySide 
+  language="merlin"
+  bordered={true}
+  diagramWidth={400}
+  diagramHeight={350}
+  overrideSize={true}
+>
+{`
+matrix data = {
+    value: [[1, 2], [3, 4]]
+}
+
+page
+show data
+
+page
+data.setText("Matrix Title", "above")
+data.setText("Row Labels", "left")
+
+page
+data.setText("Updated Title", "above")
+data.above.setFontSize(18)
+data.above.setColor("blue")
+
+page
+data.setText(null, "left")  // remove left text
+data.setText("Column Info", "below")
 `}
 </SideBySide>
 

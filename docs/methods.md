@@ -88,6 +88,30 @@ matrix.setValue(1, 2, "newValue")
 
 ---
 
+### `setValue(value)`
+Sets the text content for all lines.
+
+**Syntax:**
+```merlin
+text.setValue("newText")
+```
+
+**Supported by:** Text
+
+---
+
+### `setValue(line, value)`
+Sets the text content for a specific line.
+
+**Syntax:**
+```merlin
+text.setValue(0, "newText")  // first line
+```
+
+**Supported by:** Text
+
+---
+
 ### `setColor(index, color)`
 Sets the color at a specific index.
 
@@ -192,7 +216,7 @@ obj.setValues([1, 2, 3])
 obj.setValues([_, 2, _])  // only change middle value
 ```
 
-**Supported by:** Array, Stack, LinkedList, Graph, Tree
+**Supported by:** Array, Stack, LinkedList, Graph, Tree, Text
 
 ---
 
@@ -268,6 +292,44 @@ graph.setHidden([true, false, true])
 ```
 
 **Supported by:** Graph
+
+---
+
+## Text Positioning Methods
+
+### `setText(text, position)`
+Sets or removes text at a specific position around a data structure.
+
+**Syntax:**
+```merlin
+obj.setText("text", "above")
+obj.setText("text", "below")
+obj.setText("text", "left")
+obj.setText("text", "right")
+obj.setText(null, "above")  // remove text
+```
+
+**Parameters:**
+- `text`: String value to set, or `null` to remove text
+- `position`: String literal indicating placement - `"above"`, `"below"`, `"left"`, or `"right"`
+
+**Behavior:**
+- Creates a new text component if none exists at the specified position
+- Updates existing text component if one exists at the position
+- Removes text component when `text` is `null`
+- Automatically handles text object lifecycle (creation/deletion)
+
+**Chained Method Access:**
+Access methods of linked text objects through position chaining:
+```merlin
+// Access text object methods through the main object
+obj.above.setFontSize(16)
+obj.below.setColor("#ff0000")
+obj.left.setValue("New Text")
+obj.right.setFontWeight("bold")
+```
+
+**Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList (all non-text structures)
 
 ---
 
@@ -737,12 +799,12 @@ text.setAligns(["left", "center", "right"])
 
 ## Method Compatibility
 
-| Data Structure | setValue | setColor | setArrow | add/insert | remove | Special Methods |
-|---------------|----------|----------|----------|------------|--------|----------------|
-| Array | ✓ (index) | ✓ (index) | ✓ (index) | ✓ | ✓ | - |
-| Matrix | ✓ (2D) | ✓ (2D) | ✓ (2D) | - | - | addRow, addColumn, addBorder |
-| Graph | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | setHidden (index/id), addEdge, setEdges |
-| Tree | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | addChild, setChild, removeSubtree |
-| Stack | ✓ (index) | ✓ (index) | ✓ (index) | ✓ | ✓ | - |
-| LinkedList | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | addNode, insertNode |
-| Text | ✓ | ✓ | - | - | - | Font methods, alignment, sizing |
+| Data Structure | setValue | setColor | setArrow | setText | add/insert | remove | Special Methods |
+|---------------|----------|----------|----------|---------|------------|--------|----------------|
+| Array | ✓ (index) | ✓ (index) | ✓ (index) | ✓ | ✓ | ✓ | - |
+| Matrix | ✓ (2D) | ✓ (2D) | ✓ (2D) | ✓ | - | - | addRow, addColumn, addBorder |
+| Graph | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | ✓ | setHidden (index/id), addEdge, setEdges |
+| Tree | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | ✓ | addChild, setChild, removeSubtree |
+| Stack | ✓ (index) | ✓ (index) | ✓ (index) | ✓ | ✓ | ✓ | - |
+| LinkedList | ✓ (index/id) | ✓ (index/id) | ✓ (index/id) | ✓ | ✓ | ✓ | addNode, insertNode |
+| Text | ✓ | ✓ | - | - | - | - | Font methods, alignment, sizing |
