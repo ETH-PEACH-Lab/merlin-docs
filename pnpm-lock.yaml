@@ -22,7 +22,7 @@ importers:
         version: 3.8.1(@docusaurus/plugin-content-docs@3.8.1(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@19.1.0))(acorn@8.15.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.6.3))(@mdx-js/react@3.1.0(@types/react@19.1.8)(react@19.1.0))(acorn@8.15.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.6.3)
       '@eth-peach-lab/merlin':
         specifier: github:ETH-PEACH-Lab/merlin#main
-        version: onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/265355632d9a36d9763ea0880ba6f77635cdb31e(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.101.0))(webpack@5.100.1)
+        version: onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/2a819ffdf45e8aa021e90ccbb4283f1139ab26ff(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.101.0))(webpack@5.100.1)
       '@eth-peach-lab/mermaid-merlin':
         specifier: github:ETH-PEACH-Lab/mermaid-merlin#develop
         version: mermaid-monorepo@https://codeload.github.com/ETH-PEACH-Lab/mermaid-merlin/tar.gz/86cd929e3dba1bb8ae136e89bd32ced03504729c
@@ -1543,14 +1543,14 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@floating-ui/core@1.7.2':
-    resolution: {integrity: sha512-wNB5ooIKHQc+Kui96jE/n69rHFWAVoxn5CAzL1Xdd8FG03cgY3MLO+GF9U3W737fYDSgPWA6MReKhBQBop6Pcw==}
+  '@floating-ui/core@1.7.3':
+    resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}
 
-  '@floating-ui/dom@1.7.2':
-    resolution: {integrity: sha512-7cfaOQuCS27HD7DX+6ib2OrnW+b4ZBwDNnCcT0uTyidcmyWb03FnQqJybDBoCnpdxwBSfA94UAYlRCt7mV+TbA==}
+  '@floating-ui/dom@1.7.3':
+    resolution: {integrity: sha512-uZA413QEpNuhtb3/iIKoYMSK07keHPYeXF02Zhd6e213j+d1NamLix/mCLxBUDW/Gx52sPH2m+chlUsyaBs/Ag==}
 
-  '@floating-ui/react-dom@2.1.4':
-    resolution: {integrity: sha512-JbbpPhp38UmXDDAu60RJmbeme37Jbgsm7NrHGgzYYFKmblzRUh6Pa641dII6LsjwF4XlScDrde2UAzDo/b9KPw==}
+  '@floating-ui/react-dom@2.1.5':
+    resolution: {integrity: sha512-HDO/1/1oH9fjj4eLgegrlH3dklZpHtUYYFiVwMUwfGvk9jWDRWqkklA2/NFScknrcNSspbV868WjXORvreDX+Q==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -2128,8 +2128,8 @@ packages:
   '@types/babel__template@7.4.4':
     resolution: {integrity: sha512-h/NUaSyG5EyxBIp8YRxo4RMe2/qQgvyowRwVMzhYhBCONbW8PUsg4lkFMrhgZhUe5z3L3MiLDuvyJ/CaPa2A8A==}
 
-  '@types/babel__traverse@7.20.7':
-    resolution: {integrity: sha512-dkO5fhS7+/oos4ciWxyEyjWe48zmG6wbCheo/G2ZnHx4fs3EU6YC6UM8rk56gAjNJ9P3MTH2jo5jb92/K6wbng==}
+  '@types/babel__traverse@7.28.0':
+    resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -2326,14 +2326,14 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@22.16.5':
-    resolution: {integrity: sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==}
+  '@types/node@22.17.0':
+    resolution: {integrity: sha512-bbAKTCqX5aNVryi7qXVMi+OkB3w/OyblodicMbvE38blyAz7GxXf6XYhklokijuPwwVg9sDLKRxt0ZHXQwZVfQ==}
 
   '@types/node@24.0.13':
     resolution: {integrity: sha512-Qm9OYVOFHFYg3wJoTSrz80hoec5Lia/dPp84do3X7dZvLikQvM1YpmvTBEdIr/e+U8HTkFjLHLnl78K/qjf+jQ==}
 
-  '@types/node@24.1.0':
-    resolution: {integrity: sha512-ut5FthK5moxFKH2T1CUOC6ctR67rQRvvHdFLCD2Ql6KXmMuCrjsSsRI9UsLCm9M18BMwClv4pn327UvB7eeO1w==}
+  '@types/node@24.2.0':
+    resolution: {integrity: sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -2844,8 +2844,8 @@ packages:
   babel-plugin-transform-react-remove-prop-types@0.4.24:
     resolution: {integrity: sha512-eqj0hVcJUR57/Ug2zE1Yswsw4LhuqqHhD+8v120T1cl3kjg76QwtyBrdIk4WVwK+lAhBJVYCd/v+4nc4y+8JsA==}
 
-  babel-preset-current-node-syntax@1.1.1:
-    resolution: {integrity: sha512-23fWKohMTvS5s0wwJKycOe0dBdCwQ6+iiLaNR9zy8P13mtFRFM9qLLX6HJX5DL2pi/FNDf3fCQHM4FIMoHH/7w==}
+  babel-preset-current-node-syntax@1.2.0:
+    resolution: {integrity: sha512-E/VlAEzRrsLEb2+dv8yp3bo4scof3l9nR4lrld+Iy5NyVqgVYUJnDAmunkhPMisRI32Qc4iRiz425d8vM++2fg==}
     peerDependencies:
       '@babel/core': ^7.0.0 || ^8.0.0-0
 
@@ -3260,8 +3260,14 @@ packages:
   core-js-pure@3.44.0:
     resolution: {integrity: sha512-gvMQAGB4dfVUxpYD0k3Fq8J+n5bB6Ytl15lqlZrOIXFzxOhtPaObfkQGHtMRdyjIf7z2IeNULwi1jEwyS+ltKQ==}
 
+  core-js-pure@3.45.0:
+    resolution: {integrity: sha512-OtwjqcDpY2X/eIIg1ol/n0y/X8A9foliaNt1dSK0gV3J2/zw+89FcNG3mPK+N8YWts4ZFUPxnrAzsxs/lf8yDA==}
+
   core-js@3.44.0:
     resolution: {integrity: sha512-aFCtd4l6GvAXwVEh3XbbVqJGHDJt0OZRa+5ePGx3LLwi12WfexqQxcsohb2wgsa/92xtl19Hd66G/L+TaAxDMw==}
+
+  core-js@3.45.0:
+    resolution: {integrity: sha512-c2KZL9lP4DjkN3hk/an4pWn5b5ZefhRJnAc42n6LJ19kSnbeRbdQZE5dSeE2LBol1OwJD3X1BQvFTAsa8ReeDA==}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -3971,6 +3977,10 @@ packages:
 
   enhanced-resolve@5.18.2:
     resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
+    engines: {node: '>=10.13.0'}
+
+  enhanced-resolve@5.18.3:
+    resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
     engines: {node: '>=10.13.0'}
 
   entities@2.2.0:
@@ -5140,8 +5150,8 @@ packages:
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
 
-  jake@10.9.2:
-    resolution: {integrity: sha512-2P4SQ0HrLQ+fw6llpLnOaGAvN2Zu6778SJMrCUwns4fOoG9ayrTiZk3VV8sCPkVZF8ab0zksVpS8FDY5pRCNBA==}
+  jake@10.9.4:
+    resolution: {integrity: sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -5870,6 +5880,12 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
+  mini-css-extract-plugin@2.9.3:
+    resolution: {integrity: sha512-tRA0+PsS4kLVijnN1w9jUu5lkxBwUk9E8SbgEB5dBJqchE6pVYdawROG6uQtpmAri7tdCK9i7b1bULeVWqS6Ag==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
 
@@ -6063,8 +6079,8 @@ packages:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
 
-  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/265355632d9a36d9763ea0880ba6f77635cdb31e:
-    resolution: {tarball: https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/265355632d9a36d9763ea0880ba6f77635cdb31e}
+  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/2a819ffdf45e8aa021e90ccbb4283f1139ab26ff:
+    resolution: {tarball: https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/2a819ffdf45e8aa021e90ccbb4283f1139ab26ff}
     version: 6.1.0
     engines: {node: '>=18.16'}
 
@@ -7782,6 +7798,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
@@ -8237,6 +8254,9 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
+  undici-types@7.10.0:
+    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+
   undici-types@7.8.0:
     resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
@@ -8689,8 +8709,8 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  yaml@2.8.0:
-    resolution: {integrity: sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==}
+  yaml@2.8.1:
+    resolution: {integrity: sha512-lcYcMxX2PO9XMGvAJkJ3OsNMw+/7FKes7/hgerGUYWIoWu5j/+YQqcZr5JnPZWzOsEBgMbSbiSTn/dv/69Mkpw==}
     engines: {node: '>= 14.6'}
     hasBin: true
 
@@ -11055,18 +11075,18 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@floating-ui/core@1.7.2':
+  '@floating-ui/core@1.7.3':
     dependencies:
       '@floating-ui/utils': 0.2.10
 
-  '@floating-ui/dom@1.7.2':
+  '@floating-ui/dom@1.7.3':
     dependencies:
-      '@floating-ui/core': 1.7.2
+      '@floating-ui/core': 1.7.3
       '@floating-ui/utils': 0.2.10
 
-  '@floating-ui/react-dom@2.1.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@floating-ui/react-dom@2.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@floating-ui/dom': 1.7.2
+      '@floating-ui/dom': 1.7.3
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -11129,7 +11149,7 @@ snapshots:
   '@jest/console@27.5.1':
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       jest-message-util: 27.5.1
       jest-util: 27.5.1
@@ -11138,7 +11158,7 @@ snapshots:
   '@jest/console@28.1.3':
     dependencies:
       '@jest/types': 28.1.3
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       jest-message-util: 28.1.3
       jest-util: 28.1.3
@@ -11151,7 +11171,7 @@ snapshots:
       '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.8.1
@@ -11185,14 +11205,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       jest-mock: 27.5.1
 
   '@jest/fake-timers@27.5.1':
     dependencies:
       '@jest/types': 27.5.1
       '@sinonjs/fake-timers': 8.1.0
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       jest-message-util: 27.5.1
       jest-mock: 27.5.1
       jest-util: 27.5.1
@@ -11210,7 +11230,7 @@ snapshots:
       '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -11294,7 +11314,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       '@types/yargs': 16.0.9
       chalk: 4.1.2
 
@@ -11303,7 +11323,7 @@ snapshots:
       '@jest/schemas': 28.1.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -11391,7 +11411,7 @@ snapshots:
   '@mui/base@5.0.0-beta.40-1(@types/react@19.1.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.28.2
-      '@floating-ui/react-dom': 2.1.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@floating-ui/react-dom': 2.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mui/types': 7.2.24(@types/react@19.1.8)
       '@mui/utils': 5.17.1(@types/react@19.1.8)(react@18.3.1)
       '@popperjs/core': 2.11.8
@@ -11525,7 +11545,7 @@ snapshots:
   '@pmmmwh/react-refresh-webpack-plugin@0.5.17(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.1))(webpack@5.101.0)':
     dependencies:
       ansi-html: 0.0.9
-      core-js-pure: 3.44.0
+      core-js-pure: 3.45.0
       error-stack-parser: 2.1.4
       html-entities: 2.6.0
       loader-utils: 2.0.4
@@ -11540,7 +11560,7 @@ snapshots:
   '@pmmmwh/react-refresh-webpack-plugin@0.5.17(react-refresh@0.14.2)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.100.1))(webpack@5.100.1)':
     dependencies:
       ansi-html: 0.0.9
-      core-js-pure: 3.44.0
+      core-js-pure: 3.45.0
       error-stack-parser: 2.1.4
       html-entities: 2.6.0
       loader-utils: 2.0.4
@@ -11827,7 +11847,7 @@ snapshots:
       '@babel/types': 7.28.2
       '@types/babel__generator': 7.27.0
       '@types/babel__template': 7.4.4
-      '@types/babel__traverse': 7.20.7
+      '@types/babel__traverse': 7.28.0
 
   '@types/babel__generator@7.27.0':
     dependencies:
@@ -11838,7 +11858,7 @@ snapshots:
       '@babel/parser': 7.28.0
       '@babel/types': 7.28.2
 
-  '@types/babel__traverse@7.20.7':
+  '@types/babel__traverse@7.28.0':
     dependencies:
       '@babel/types': 7.28.2
 
@@ -12029,7 +12049,7 @@ snapshots:
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
 
   '@types/gtag.js@0.0.12': {}
 
@@ -12079,7 +12099,7 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@22.16.5':
+  '@types/node@22.17.0':
     dependencies:
       undici-types: 6.21.0
 
@@ -12087,9 +12107,9 @@ snapshots:
     dependencies:
       undici-types: 7.8.0
 
-  '@types/node@24.1.0':
+  '@types/node@24.2.0':
     dependencies:
-      undici-types: 7.8.0
+      undici-types: 7.10.0
 
   '@types/parse-json@4.0.2': {}
 
@@ -12135,7 +12155,7 @@ snapshots:
 
   '@types/resolve@1.17.1':
     dependencies:
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
 
   '@types/retry@0.12.0': {}
 
@@ -12668,7 +12688,7 @@ snapshots:
       '@babel/template': 7.27.2
       '@babel/types': 7.28.2
       '@types/babel__core': 7.20.5
-      '@types/babel__traverse': 7.20.7
+      '@types/babel__traverse': 7.28.0
 
   babel-plugin-macros@3.1.0:
     dependencies:
@@ -12706,7 +12726,7 @@ snapshots:
 
   babel-plugin-transform-react-remove-prop-types@0.4.24: {}
 
-  babel-preset-current-node-syntax@1.1.1(@babel/core@7.28.0):
+  babel-preset-current-node-syntax@1.2.0(@babel/core@7.28.0):
     dependencies:
       '@babel/core': 7.28.0
       '@babel/plugin-syntax-async-generators': 7.8.4(@babel/core@7.28.0)
@@ -12729,7 +12749,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.0
       babel-plugin-jest-hoist: 27.5.1
-      babel-preset-current-node-syntax: 1.1.1(@babel/core@7.28.0)
+      babel-preset-current-node-syntax: 1.2.0(@babel/core@7.28.0)
 
   babel-preset-react-app@10.1.0:
     dependencies:
@@ -12917,7 +12937,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.28.2
       '@types/raf': 3.4.3
-      core-js: 3.44.0
+      core-js: 3.45.0
       raf: 3.4.1
       regenerator-runtime: 0.13.11
       rgbcolor: 1.0.1
@@ -13168,7 +13188,11 @@ snapshots:
 
   core-js-pure@3.44.0: {}
 
+  core-js-pure@3.45.0: {}
+
   core-js@3.44.0: {}
+
+  core-js@3.45.0: {}
 
   core-util-is@1.0.3: {}
 
@@ -13907,7 +13931,7 @@ snapshots:
 
   ejs@3.1.10:
     dependencies:
-      jake: 10.9.2
+      jake: 10.9.4
 
   electron-to-chromium@1.5.182: {}
 
@@ -13930,6 +13954,11 @@ snapshots:
   encodeurl@2.0.0: {}
 
   enhanced-resolve@5.18.2:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.2
+
+  enhanced-resolve@5.18.3:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.2
@@ -15410,12 +15439,11 @@ snapshots:
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
-  jake@10.9.2:
+  jake@10.9.4:
     dependencies:
       async: 3.2.6
-      chalk: 4.1.2
       filelist: 1.0.4
-      minimatch: 3.1.2
+      picocolors: 1.1.1
 
   jest-changed-files@27.5.1:
     dependencies:
@@ -15428,7 +15456,7 @@ snapshots:
       '@jest/environment': 27.5.1
       '@jest/test-result': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       co: 4.6.0
       dedent: 0.7.0
@@ -15524,7 +15552,7 @@ snapshots:
       '@jest/environment': 27.5.1
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       jest-mock: 27.5.1
       jest-util: 27.5.1
       jsdom: 16.7.0
@@ -15539,7 +15567,7 @@ snapshots:
       '@jest/environment': 27.5.1
       '@jest/fake-timers': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       jest-mock: 27.5.1
       jest-util: 27.5.1
 
@@ -15549,7 +15577,7 @@ snapshots:
     dependencies:
       '@jest/types': 27.5.1
       '@types/graceful-fs': 4.1.9
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -15568,7 +15596,7 @@ snapshots:
       '@jest/source-map': 27.5.1
       '@jest/test-result': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       co: 4.6.0
       expect: 27.5.1
@@ -15623,7 +15651,7 @@ snapshots:
   jest-mock@27.5.1:
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
 
   jest-pnp-resolver@1.2.3(jest-resolve@27.5.1):
     optionalDependencies:
@@ -15661,7 +15689,7 @@ snapshots:
       '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       emittery: 0.8.1
       graceful-fs: 4.2.11
@@ -15712,7 +15740,7 @@ snapshots:
 
   jest-serializer@27.5.1:
     dependencies:
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       graceful-fs: 4.2.11
 
   jest-snapshot@27.5.1:
@@ -15724,9 +15752,9 @@ snapshots:
       '@babel/types': 7.28.2
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
-      '@types/babel__traverse': 7.20.7
+      '@types/babel__traverse': 7.28.0
       '@types/prettier': 2.7.3
-      babel-preset-current-node-syntax: 1.1.1(@babel/core@7.28.0)
+      babel-preset-current-node-syntax: 1.2.0(@babel/core@7.28.0)
       chalk: 4.1.2
       expect: 27.5.1
       graceful-fs: 4.2.11
@@ -15745,7 +15773,7 @@ snapshots:
   jest-util@27.5.1:
     dependencies:
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -15754,7 +15782,7 @@ snapshots:
   jest-util@28.1.3:
     dependencies:
       '@jest/types': 28.1.3
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -15793,7 +15821,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 27.5.1
       '@jest/types': 27.5.1
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       jest-util: 27.5.1
@@ -15803,7 +15831,7 @@ snapshots:
     dependencies:
       '@jest/test-result': 28.1.3
       '@jest/types': 28.1.3
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.10.2
@@ -15812,7 +15840,7 @@ snapshots:
 
   jest-worker@26.6.2:
     dependencies:
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
@@ -15824,7 +15852,7 @@ snapshots:
 
   jest-worker@28.1.3:
     dependencies:
-      '@types/node': 24.1.0
+      '@types/node': 24.2.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -15948,7 +15976,7 @@ snapshots:
       fflate: 0.8.2
     optionalDependencies:
       canvg: 3.0.11
-      core-js: 3.44.0
+      core-js: 3.45.0
       dompurify: 2.5.8
       html2canvas: 1.4.1
 
@@ -16716,7 +16744,7 @@ snapshots:
       tapable: 2.2.2
       webpack: 5.100.1
 
-  mini-css-extract-plugin@2.9.2(webpack@5.101.0):
+  mini-css-extract-plugin@2.9.3(webpack@5.101.0):
     dependencies:
       schema-utils: 4.3.2
       tapable: 2.2.2
@@ -16911,7 +16939,7 @@ snapshots:
     dependencies:
       mimic-fn: 2.1.0
 
-  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/265355632d9a36d9763ea0880ba6f77635cdb31e(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.101.0))(webpack@5.100.1):
+  onsenui-v2-react-minimum@https://codeload.github.com/ETH-PEACH-Lab/merlin/tar.gz/2a819ffdf45e8aa021e90ccbb4283f1139ab26ff(@babel/plugin-syntax-flow@7.27.1(@babel/core@7.28.0))(@babel/plugin-transform-react-jsx@7.27.1(@babel/core@7.28.0))(@types/babel__core@7.20.5)(@types/react@19.1.8)(eslint@8.57.1)(type-fest@2.19.0)(typescript@5.6.3)(webpack-dev-server@4.15.2(webpack@5.101.0))(webpack@5.100.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@18.3.1))(@types/react@19.1.8)(react@19.1.0)
@@ -17484,7 +17512,7 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.5.6):
     dependencies:
       lilconfig: 3.1.3
-      yaml: 2.8.0
+      yaml: 2.8.1
     optionalDependencies:
       postcss: 8.5.6
 
@@ -18017,7 +18045,7 @@ snapshots:
 
   pptxgenjs@4.0.1:
     dependencies:
-      '@types/node': 22.16.5
+      '@types/node': 22.17.0
       https: 1.0.0
       image-size: 1.2.1
       jszip: 3.10.1
@@ -18147,7 +18175,7 @@ snapshots:
 
   react-app-polyfill@3.0.0:
     dependencies:
-      core-js: 3.44.0
+      core-js: 3.45.0
       object-assign: 4.1.1
       promise: 8.3.0
       raf: 3.4.1
@@ -18297,7 +18325,7 @@ snapshots:
       jest: 27.5.1
       jest-resolve: 27.5.1
       jest-watch-typeahead: 1.1.0(jest@27.5.1)
-      mini-css-extract-plugin: 2.9.2(webpack@5.101.0)
+      mini-css-extract-plugin: 2.9.3(webpack@5.101.0)
       postcss: 8.5.6
       postcss-flexbugs-fixes: 5.0.2(postcss@8.5.6)
       postcss-loader: 6.2.1(postcss@8.5.6)(webpack@5.101.0)
@@ -19481,6 +19509,8 @@ snapshots:
 
   undici-types@6.21.0: {}
 
+  undici-types@7.10.0: {}
+
   undici-types@7.8.0: {}
 
   unicode-canonical-property-names-ecmascript@2.0.1: {}
@@ -19868,7 +19898,7 @@ snapshots:
       acorn-import-phases: 1.0.4(acorn@8.15.0)
       browserslist: 4.25.1
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.18.2
+      enhanced-resolve: 5.18.3
       es-module-lexer: 1.7.0
       eslint-scope: 5.1.1
       events: 3.3.0
@@ -20151,7 +20181,7 @@ snapshots:
 
   yaml@1.10.2: {}
 
-  yaml@2.8.0: {}
+  yaml@2.8.1: {}
 
   yargs-parser@20.2.9: {}
 
