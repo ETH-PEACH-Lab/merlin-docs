@@ -43,6 +43,9 @@ Arrays support the following properties:
 
 Arrays support these methods for manipulation:
 
+### Text Positioning Methods
+- `setText(text, position)` - Set or remove text at specific positions (`"above"`, `"below"`, `"left"`, `"right"`)
+
 ### Single Element Methods
 - `setValue(index, value)` - Set value at specific index
 - `setColor(index, color)` - Set color at specific index  
@@ -144,6 +147,38 @@ array scores = {
 
 page
 show scores
+`}
+</SideBySide>
+
+### Dynamic Text with setText
+
+<SideBySide 
+  language="merlin"
+  bordered={true}
+  diagramWidth={400}
+  diagramHeight={300}
+  overrideSize={true}
+>
+{`
+array arr = {
+    value: [1, 2, 3, 4]
+}
+
+page
+show arr
+
+page
+arr.setText("Array Elements", "above")
+arr.setText("Index: 0, 1, 2, 3", "below")
+
+page
+arr.setText("Modified Array", "above")
+arr.above.setFontWeight("bold")
+arr.below.setColor("gray")
+
+page
+arr.setText(null, "below")  // remove bottom text
+arr.setText("Size: 4", "right")
 `}
 </SideBySide>
 

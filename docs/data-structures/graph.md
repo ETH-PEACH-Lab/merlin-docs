@@ -48,6 +48,9 @@ Graphs support the following properties:
 
 Graphs support these methods for manipulation:
 
+### Text Positioning Methods
+- `setText(text, position)` - Set or remove text at specific positions (`"above"`, `"below"`, `"left"`, `"right"`)
+
 ### Node Methods
 - `addNode(name, value?)` - Add new node with optional value
 - `removeNode(name)` - Remove node and its edges

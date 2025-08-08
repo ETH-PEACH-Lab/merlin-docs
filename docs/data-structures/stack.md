@@ -43,6 +43,9 @@ Stacks support the following properties:
 
 Stacks support these methods for manipulation:
 
+### Text Positioning Methods
+- `setText(text, position)` - Set or remove text at specific positions (`"above"`, `"below"`, `"left"`, `"right"`)
+
 ### Single Element Methods
 - `setValue(index, value)` - Set value at specific position
 - `setColor(index, color)` - Set color at specific position  
