@@ -39,9 +39,9 @@ Click the <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="c
 
 ## How It Works
 
-- **Define** your objects (array, graph, etc.)
-- **Create pages** using `page` to show steps or slides
-- **Show** using `show <obj>` your objects once and they'll show on all future pages (use `hide <obj>` to hide it again)
-- **Manipulate** them with methods (e.g., `<obj>.setColor`, `<obj>.addNode`)
+- **Create pages** using `page` to show steps or slides or use the page controls.
+- **Create objects and display them** using `show <obj>` your objects once and they'll show on all future pages (use `hide <obj>` to hide it again) or use the components menu.
+- **Style your objects** with methods (e.g., `<obj>.setColor`, `<obj>.addNode`) or by clicking on a unit to edit it and double-clicking
+on a component to edit multiple units at the same time.
 
 For a full language reference, see [Language Reference](./language-reference.md).

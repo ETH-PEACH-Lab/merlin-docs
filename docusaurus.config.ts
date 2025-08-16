@@ -127,6 +127,10 @@ const config: Config = {
               to: '/docs/types',
             },
             {
+              label: 'GUI Reference',
+              to: '/docs/gui',
+            },
+            {
               label: 'Methods',
               to: '/docs/methods',
             },
