@@ -2,29 +2,23 @@
 sidebar_position: 3
 ---
 
-import RemoveSubtreeSvg from '../static/img/remove-subtree.svg';
-import AddRowSvg from '../static/img/add-row.svg';
-import RemoveRowSvg from '../static/img/remove-row.svg';
-import AddSvg from '../static/img/add.svg';
-import EditSvg from '../static/img/edit.svg';
-
-
-
 # GUI reference
 
 This is a complete reference of all GUI controls available for creating and manipulating Merlin data structures and pages. The controls are organized by category and indicate which data structures support them.
 
 ## Page Controls
 
-### Add Page
+### Add Page <Icon svgName="add" />
 Creates a new visualization step.
 
-### Remove Page
+---
+
+### Remove Page <Icon svgName="delete" />
 Removes the visualization step that is currently shown.
 
 ---
 
-### Set Page Grid
+### Set Page Grid <Icon svgName="grid" />
 Set a grid. A grid defines different locations where a component can be placed. After a grid is created a component can be positioned
 within it.
 See more: [Positioning](./positioning.md)
@@ -77,14 +71,14 @@ Example: "hello!"
 
 ---
 
-### Remove Component
+### Remove Component <Icon svgName="delete" />
 Removes the component from all pages. This control is only available on the first page.
 
 **Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList
 
 ---
 
-### Styling
+### Structure & Styling
 Set the values, color and arrows of multiple units. Add and/or remove multiple units and/or edges. <br />
 
 **Array:** <br />
@@ -109,7 +103,7 @@ Set the values, color and arrows of multiple units. Adding or removing values ad
 
 ---
 
-### Text
+### Text <Icon svgName="text" />
 Add text above, below, to the left or to the right of the component.
 To remove the text, simply remove it from the input field.
 
@@ -117,7 +111,7 @@ To remove the text, simply remove it from the input field.
 
 ---
 
-### Position
+### Position <Icon svgName="grid" />
 Position the component within the grid. This only works if a grid has been defined for the current page.
 To define a grid, see the 
 
@@ -129,40 +123,28 @@ See more: [Positioning](./positioning.md)
 
 ## Unit Controls
 
-<GuiHeader 
-  title="Edit Value"
-  svgName="edit"
-/>
+### Edit Value <Icon svgName="edit" />
 Change the value of the node. If the field is left empty, the value will be set to null.
 
 **Supported by:** Array, Stack, Matrix, Graph, Tree, LinkedList
 
 ---
 
-<GuiHeader 
-  title="Edit Color"
-  svgName="color"
-/>
+### Edit Color <Icon svgName="color" />
 Sets the color at a specific index.
 
 **Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList
 
 ---
 
-<GuiHeader 
-  title="Edit Label"
-  svgName="text"
-/>
+### Edit Label <Icon svgName="label" />
 Sets the arrow/label at a specific index.
 
 **Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList
 
 ---
 
-<GuiHeader 
-  title="Add Unit"
-  svgName="add"
-/>
+### Add Unit <Icon svgName="add" />
 Add a unit.
 
 **Array:** <br />
@@ -184,61 +166,42 @@ Add a unit with that value after the current unit.
 
 ---
 
-<GuiHeader 
-  title="Add Row"
-  svgName="add-row"
-/>
+### Add Row <Icon svgName="add-row"/>
 Add a row below the current row.
 
 **Supported by:** Matrix
 
 ---
 
-<GuiHeader 
-  title="Add Column"
-  svgName="add-column"
-/>
+### Add Column <Icon svgName="add-column" />
 Add a row to the right of the current row.
 
 **Supported by:** Matrix
 
 ---
 
-<GuiHeader 
-  title="Remove Unit"
-  svgName="remove"
-/>
+### Remove Unit <Icon svgName="remove" />
 Removes the current unit. For graph nodes, all edges with this node will also be deleted.
 
 **Supported by:** Array, Graph, Tree, Stack, LinkedList
 
 ---
 
-<GuiHeader 
-  title="Remove Row"
-  svgName="remove-row"
-/>
-
+### Remove Row <Icon svgName="remove-row" />
 Removes the row that contains the current unit.
 
 **Supported by:** Matrix
 
 ---
 
-<GuiHeader 
-  title="Remove Column"
-  svgName="remove-column"
-/>
+### Remove Column <Icon svgName="remove-column" />
 Removes the column that contains the current unit.
 
 **Supported by:** Matrix
 
 ---
 
-<GuiHeader 
-  title="Remove Subtree"
-  svgName="remove-subtree"
-/>
+### Remove Subtree <Icon svgName="remove-subtree" />
 Removes the current unit and all children of this unit.
 
 **Supported by:** Tree
