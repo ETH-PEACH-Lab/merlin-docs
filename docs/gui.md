@@ -2,6 +2,14 @@
 sidebar_position: 3
 ---
 
+import RemoveSubtreeSvg from '../static/img/remove-subtree.svg';
+import AddRowSvg from '../static/img/add-row.svg';
+import RemoveRowSvg from '../static/img/remove-row.svg';
+import AddSvg from '../static/img/add.svg';
+import EditSvg from '../static/img/edit.svg';
+
+
+
 # GUI reference
 
 This is a complete reference of all GUI controls available for creating and manipulating Merlin data structures and pages. The controls are organized by category and indicate which data structures support them.
@@ -19,7 +27,6 @@ Removes the visualization step that is currently shown.
 ### Set Page Grid
 Set a grid. A grid defines different locations where a component can be placed. After a grid is created a component can be positioned
 within it.
-
 See more: [Positioning](./positioning.md)
 
 ---
@@ -66,7 +73,7 @@ Any string <br />
 Example: "hello!"
 
 
-**Supported by:** All structures
+**Supported by:** All structures <br />
 
 ---
 
@@ -122,28 +129,40 @@ See more: [Positioning](./positioning.md)
 
 ## Unit Controls
 
-### Edit Value
+<GuiHeader 
+  title="Edit Value"
+  svgName="edit"
+/>
 Change the value of the node. If the field is left empty, the value will be set to null.
 
 **Supported by:** Array, Stack, Matrix, Graph, Tree, LinkedList
 
 ---
 
-### Edit Color
+<GuiHeader 
+  title="Edit Color"
+  svgName="color"
+/>
 Sets the color at a specific index.
 
 **Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList
 
 ---
 
-### Edit Arrow
+<GuiHeader 
+  title="Edit Label"
+  svgName="text"
+/>
 Sets the arrow/label at a specific index.
 
 **Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList
 
 ---
 
-### Add Unit
+<GuiHeader 
+  title="Add Unit"
+  svgName="add"
+/>
 Add a unit.
 
 **Array:** <br />
@@ -152,59 +171,74 @@ Add a unit with that value after the current unit.
 **Graph:** <br />
 Add a node anywhere in the graph.
 
+**Tree:** <br />
+Add a node as a child of the current node.
+
 **Stack:** <br />
 Add a unit with that value above the current unit.
 
 **LinkedList:** <br />
 Add a unit with that value after the current unit.
 
-**Supported by:** Array, Graph, Stack, LinkedList
+**Supported by:** Array, Graph, Stack, LinkedList, Tree
 
 ---
 
-### Add Row
+<GuiHeader 
+  title="Add Row"
+  svgName="add-row"
+/>
 Add a row below the current row.
 
 **Supported by:** Matrix
 
 ---
 
-### Add Column
+<GuiHeader 
+  title="Add Column"
+  svgName="add-column"
+/>
 Add a row to the right of the current row.
 
 **Supported by:** Matrix
 
 ---
 
-### Add Child
-Add a new node with that values as a child of the current unit.
-
-**Supported by:** Tree
-
----
-
-### Remove Unit
+<GuiHeader 
+  title="Remove Unit"
+  svgName="remove"
+/>
 Removes the current unit. For graph nodes, all edges with this node will also be deleted.
 
 **Supported by:** Array, Graph, Tree, Stack, LinkedList
 
 ---
 
-### Remove Row
+<GuiHeader 
+  title="Remove Row"
+  svgName="remove-row"
+/>
+
 Removes the row that contains the current unit.
 
 **Supported by:** Matrix
 
 ---
 
-### Remove Column
+<GuiHeader 
+  title="Remove Column"
+  svgName="remove-column"
+/>
 Removes the column that contains the current unit.
 
 **Supported by:** Matrix
 
 ---
 
-### Remove Subtree
+<GuiHeader 
+  title="Remove Subtree"
+  svgName="remove-subtree"
+/>
 Removes the current unit and all children of this unit.
 
 **Supported by:** Tree
