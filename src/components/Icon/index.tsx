@@ -19,6 +19,7 @@ const Svg: Dictionary<React.ComponentType<React.ComponentProps<'svg'>>> = {
     "remove-column": require('@site/static/img/remove-column.svg').default,
     "remove-row": require('@site/static/img/remove-row.svg').default,
     "remove-subtree": require('@site/static/img/remove-subtree.svg').default,
+    "structure": require('@site/static/img/structure.svg').default,
     "text": require('@site/static/img/text.svg').default,
 };
 

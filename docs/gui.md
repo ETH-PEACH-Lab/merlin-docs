@@ -4,9 +4,14 @@ sidebar_position: 3
 
 # GUI reference
 
+![Image of the GUI panel](../static/img/merlin-editor.png)
+
 This is a complete reference of all GUI controls available for creating and manipulating Merlin data structures and pages. The controls are organized by category and indicate which data structures support them.
 
 ## Page Controls
+
+![Image showing where the page controls are](../static/img/page-controls.png)
+
 
 ### Add Page <Icon svgName="add" />
 Creates a new visualization step.
@@ -27,8 +32,14 @@ See more: [Positioning](./positioning.md)
 
 ## Component Controls
 
+You can open the component controls by **double-clicking** on any unit.
+
+![Image of component toolbar](../static/img/component-toolbar.png)
+
 ### Create Component
 Opens a dropdown that allows you to choose which type of component you would like to create. Once chosen, a separate menu will popup where you can specify the values of the component (for example, nodes and edges for graphs or values for arrays).
+
+![Image showing where the create component button is](../static/img/create-component.png)
 
 Here is a list of what can/must be specified to create each component:
 
@@ -72,13 +83,14 @@ Example: "hello!"
 ---
 
 ### Remove Component <Icon svgName="delete" />
-Removes the component from all pages. This control is only available on the first page.
+Removes the component from the current page and all future pages. 
+**Important:** This can only be undone by recreating the component using the GUI or by using the code editor.
 
 **Supported by:** Array, Matrix, Graph, Tree, Stack, LinkedList
 
 ---
 
-### Structure & Styling
+### Structure & Styling <Icon svgName="structure" />
 Set the values, color and arrows of multiple units. Add and/or remove multiple units and/or edges. <br />
 
 **Array:** <br />
@@ -122,6 +134,10 @@ See more: [Positioning](./positioning.md)
 ---
 
 ## Unit Controls
+
+You can open the unit controls by **clicking** on any unit.
+
+![Image of unit toolbar](../static/img/unit-toolbar.png)
 
 ### Edit Value <Icon svgName="edit" />
 Change the value of the node. If the field is left empty, the value will be set to null.
@@ -205,6 +221,3 @@ Removes the column that contains the current unit.
 Removes the current unit and all children of this unit.
 
 **Supported by:** Tree
-
-
-
