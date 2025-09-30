@@ -125,7 +125,7 @@ mat.setValue(2, 0, 7)
 mat.setValue(2, 1, 8)
 
 page
-mat.addColumn(0)
+mat.addColumn([5, 5, 5])
 mat.setValues([[0, 1, 5], [0, 3, 4], [0, 7, 8]])
 mat.setColors([["gray", null, "red"], ["gray", null, null], ["gray", null, null]])
 `}
@@ -201,7 +201,8 @@ data.above.setFontSize(18)
 data.above.setColor("blue")
 
 page
-data.setText(null, "left")  // remove left text
+// remove left text
+data.setText(null, "left")
 data.setText("Column Info", "below")
 `}
 </SideBySide>

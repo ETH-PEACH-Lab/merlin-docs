@@ -126,12 +126,14 @@ list.setColor(2, "green")
 list.setArrow(2, "new")
 
 page
-list.insertNode(1, n1_5, 15)  // insert by index
+// insert by index
+list.insertNode(1, n1_5, 15)
 list.setColors([null, "blue", null, "green"])
 list.setArrows([null, "inserted", null, null])
 
 page
-list.insertNode(n1_5, n1_75, 17.5)  // insert after node ID
+// insert after node ID
+list.insertNode(n1_5, n1_75, 17.5)
 list.setColors([null, "blue", "yellow", null, "green"])
 list.setArrows([null, "inserted", "after n1_5", null, null])
 
@@ -201,7 +203,8 @@ page
 show sorted
 
 page
-sorted.insertNode(n10, n25, 25)  // insert after n10 node
+// insert after n10 node
+sorted.insertNode(n10, n25, 25)
 sorted.setColor(1, "red")
 sorted.setArrow(1, "inserted")
 `}
