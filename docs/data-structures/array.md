@@ -177,7 +177,8 @@ arr.above.setFontWeight("bold")
 arr.below.setColor("gray")
 
 page
-arr.setText(null, "below")  // remove bottom text
+// remove bottom text
+arr.setText(null, "below")
 arr.setText("Size: 4", "right")
 `}
 </SideBySide>
