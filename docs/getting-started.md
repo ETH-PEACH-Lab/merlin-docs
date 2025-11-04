@@ -9,7 +9,9 @@ Welcome to **Merlin**! Merlin is a language for visualizing data structures and 
 
 ## What is Merlin?
 
-Merlin lets you define arrays, matrices, graphs, trees and more, and visualize their transformations step by step. It's perfect for teaching, learning, and exploring algorithms.
+Merlin is a declarative language specifically for algorithm animations. It comes with code editor and a GUI to help you create you visualizations more quickly. 
+
+The design of Merlin is informed by an analysis of 400 examples from an online coding platform, examining their structure, common elements, and creation processes. So, it's perfect for teaching, learning, and exploring algorithms!
 
 ## Try it Online
 
