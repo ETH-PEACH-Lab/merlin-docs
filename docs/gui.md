@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# GUI reference
+# GUI Reference
 
 ![Image of the GUI panel](../static/img/merlin-editor.png)
 
