@@ -340,10 +340,11 @@ Langium is a framework for building domain-specific languages (DSLs) and their a
 - **Extensibility**: The Langium framework can be extended to add new features to the DSL or enhance the editor experience.
 
 ## Related Projects
+As part of this project, we collected 400 algorithm intuition slides. <br />
+`Intuition Visualizer` project repo: https://eth-peach-lab.github.io/intuition-visualisation/ 
 
-`Merlin` project repo: https://github.com/ETH-PEACH-Lab/merlin  
-`Merlin` Tutorial repo: https://github.com/ETH-PEACH-Lab/intuition-vis-tutorial  
-`Mermaid` Extension repo: https://github.com/ETH-PEACH-Lab/mermaid-merlin/tree/develop
+We also have a repo for modifying Mermaid code.  <br />
+`Mermaid` extension repo: https://github.com/ETH-PEACH-Lab/mermaid-merlin/tree/develop
 
 ## Acknowledgements & Contributors
 
