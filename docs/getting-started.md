@@ -5,13 +5,22 @@ sidebar_position: 1
 
 # Getting Started with Merlin
 
-Welcome to **Merlin**! Merlin is a language for visualizing data structures and algorithms interactively. This guide will help you get started quickly.
+Welcome to **Merlin**! Merlin is a language for visualizing data structures and algorithms interactively. The Merlin Editor is a project developed by the ETH PEACH Lab, designed to provide users more convenient experience for making algorithms visualizations, by extending and integrating the Mermaid diagramming tool into a graphical user interface (GUI). This integration facilitates the creation and visualization of data structures directly within the application using customized domain specific languages (DSL).
+
+This guide will help you get started quickly.
 
 ## What is Merlin?
 
 Merlin is a declarative language specifically for algorithm animations. It comes with code editor and a GUI to help you create you visualizations more quickly. 
 
 The design of Merlin is informed by an analysis of 400 examples from an online coding platform, examining their structure, common elements, and creation processes. So, it's perfect for teaching, learning, and exploring algorithms!
+
+### Features
+- **Customized Domain Specific Language**: *Merlin* and *Merlin-Lite* are developed as DSL to serve for our project. They are easy-to-learn for any users with some programming background. They are also very extensible for customized usage, for instance, add a new pattern of data structure.
+- **Mermaid-extension Plugin Integration**: Easily generate visualizations of data structure like array, graph etc., using the Mermaid-likewise extention and workflow.
+- **GUI Focus**: The project is designed around improving the user experience with graphical interfaces for visulization rendering.
+- **Open-Source**: The code is open-source and can be modified and extended to suit different needs.
+
 
 ## How It Works
 
@@ -21,10 +30,6 @@ The design of Merlin is informed by an analysis of 400 examples from an online c
 on a component to edit multiple units at the same time.
 
 For a full language reference, see [Language Reference](./language-reference.md).
-
-## Try it Online
-
-You can use the [Merlin Editor](https://eth-peach-lab.github.io/merlin/) to write and run Merlin code instantly. Just copy any example below and click the <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style={{display: 'inline', verticalAlign: 'text-middle', marginRight: '4px'}}><path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/></svg>**Merlin Editor** button above a code block!
 
 ## Your First Merlin Program
 
@@ -136,7 +141,12 @@ array1.setArrow(2, "1 + 1 = 2")
 
 Congratulations! You have created a complete visualization. 
 
-Try out the Merlin editor yourself at [Merlin Editor](https://eth-peach-lab.github.io/merlin/). <br />
+
+## Try it Online
+
+You can use the [Merlin Editor](https://eth-peach-lab.github.io/merlin/) to write and run Merlin code instantly. Just copy any example below and click the <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style={{display: 'inline', verticalAlign: 'text-middle', marginRight: '4px'}}><path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM5.904 10.803 10 6.707v2.768a.5.5 0 0 0 1 0V5.5a.5.5 0 0 0-.5-.5H6.525a.5.5 0 1 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 .707.707"/></svg>**Merlin Editor** button above a code block!
+
+
 To learn more about the GUI, see [GUI Reference](./gui.md). <br />
 For a full language reference, see [Language Reference](./language-reference.md).
 

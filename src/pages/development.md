@@ -1,13 +1,4 @@
 # Development
-## Overview
-The Merlin Editor is a project developed by the ETH PEACH Lab, designed to provide users more convenient experience for making algorithms visualizations, by extending and integrating the Mermaid diagramming tool into a graphical user interface (GUI). This integration facilitates the creation and visualization of data structures directly within the application using customized domain specific languages (DSL).
-
-## Features
-- **Customized Domain Specific Language**: *Merlin* and *Merlin-Lite* are developed as DSL to serve for our project. They are easy-to-learn for any users with some programming background. They are also very extensible for customized usage, for instance, add a new pattern of data structure.
-- **Mermaid-extension Plugin Integration**: Easily generate visualizations of data structure like array, graph etc., using the Mermaid-likewise extention and workflow.
-- **GUI Focus**: The project is designed around improving the user experience with graphical interfaces for visulization rendering.
-- **Open-Source**: The code is open-source and can be modified and extended to suit different needs.
-
 ## Installation
 To develop *Merlin* project or customize your own extensions, you need to setup first on your local environment. The setup has 3 main steps:
 
@@ -100,119 +91,48 @@ Once the application is running on the browser, you can begin using the GUI and 
    - You will be greeted with the **Merlin Editor**, showcasing the workspace where diagrams can be created and modified.
 
 2. **Start Creating Diagrams**  
-   - Use the **Code Editor** to directly enter the Merlin or Merlin-Lite syntax. This syntax is automatically parsed into Merlin Visualizations.
-   - Alternatively, interact Visualizations with the diagram using the graphical interface, which updates the syntax dynamically and automatically.
-
-3. **Real-Time Rendering**  
+   - Use the **Code Editor** to enter Merlin-Lite syntax. 
+   - Alternatively, use the graphical user interface directly.
    - All modifications—whether made in syntax or via the GUI—are rendered in real-time in the **preview pane**.  
    - The rendering uses extended Mermaid.js to generate high-quality visual representations of your visual elements.
 
-2. **Export and Save**  
+3. **Export, Save and Share**  
    - Once satisfied with your visualization, you can export it in multiple formats, such as:
      - PNG/SVG images for embedding in documents.
      - PDF format for integration into other tools and projects.
-
-3. **Integration and Sharing**  
-   - The tool has potential for easy integration with external workflows, making it ideal for using Merlin syntax in documentation, development, or presentations.  
-   - Simply copy the syntax or save the visualizations for reuse.
-
-### Example Workflow
-
-1. **Start by typing a simple flowchart syntax in the Merlin Editor.** Example:
-   ```mermaid
-   graph TD
-     A[Melrin Syntax] --generate & revise--> B[Visual Elements]
-    B--update-->A
-     B --> C[Export Visuals]
-    D[Graphic User Interface] --revise--> B
-    ```
 
 ## Project Structure
 The project's structure is organized as:
 
 ```python
 merlin/
-├── .monaca/                # Configuration directory for Monaca (cloud-based IDE)
 ├── res/                    # Resource folder for assets like images or styles
 ├── src/                    # Source code folder containing the main application logic
-│   ├── components/         # Reusable UI components
-├── test/                   # Unit tests and integration tests for the application
-├── .gitignore              # Specifies files and folders to ignore in Git version control
-├── .monacaignore           # Specifies files to exclude from Monaca's build process
-├── LICENSE                 # License file (likely MIT) detailing usage rights
+├── test/                   # Unit tests and integration tests for the applicationd
 ├── config.xml              # Configuration file for project settings (e.g., app metadata)
 ├── package.json            # NPM package configuration file for managing dependencies
-├── pnpm-lock.yaml          # Lockfile for pnpm, ensuring consistent dependency versions
 └── webpack.config.js       # Webpack configuration for building and bundling the app
 ```  
-The Configuration of the project are mainly in `package.json` and `webpack.config.js`, including metadata, dependency management, script definition, versioning, dependency tracking.  
+The configuration of the project are mainly in `package.json` and `webpack.config.js`, including metadata, dependency management, script definition, versioning, dependency tracking.  
 
 The code for the app functions are mainly under the `\src` folder. The structure under `\src` is organized as:
 ```python
 src/
 ├── compiler/               # Code responsible for compiling DSL to the target format
 ├── components/             # Reusable UI components
-├── examples/               # Example implementations or configurations
-├── hardcode/               # Hardcoded values or constants used in the app
-├── libs/                   # Third-party libraries or internal modules
+├── context/                # Context shared by components
 ├── parser/                 # Logic for parsing DSL or input files
 ├── public/                 # Public assets, such as images or static files
-├── App.css                 # Stylesheet for the main App component
-├── App.jsx                 # Main App component
+├── utils/                  # Helper functions used by various components
+├── App.jsx                 # Main App component for rendering the app's UI.
 ├── Theme.js                # Theme configuration or styling logic
 ├── examples.js             # Example scripts or demonstrations
+├── index.css               # Stylesheet for the main App component
 ├── generateExamples.js     # Script for generating examples dynamically
 ├── index.css               # Global stylesheet
 └── main.jsx                # Main entry point of the application
 
 ```
-
-The `src` directory contains the core files and folders that make up the project. Each entry in this directory serves a specific purpose in the overall structure of the application. Below is a detailed explanation of the structure.
-
-#### `compiler/`
-- Contains the logic responsible for compiling the Domain-Specific Language (DSL) into a target format.
-- **Purpose**: Handles the transformation of user-defined syntax into actionable output for rendering or exporting.
-
-#### `components/`
-- Includes reusable UI components that can be used across the application.
-- **Examples**: Common elements like headers, footers, buttons, or widgets.
-- **Purpose**: To ensure modularity and reusability of UI elements, making the app easier to maintain and extend.
-
-#### `libs/`
-- Contains third-party libraries or internal modules used by the application.
-- **Purpose**: Provides additional functionality not included in the core application logic.
-
-#### `parser/`
-- Implements logic for parsing the Merlin DSL or other input formats.
-- **Purpose**: Converts raw user input into a structured format that the application can process.
-
-#### `public/`
-- Includes static assets such as images, fonts, and other public-facing files.
-- **Purpose**: Provides resources that are directly accessible by the browser or referenced in the project.
-
-#### `App.css`
-- Stylesheet for the main `App.jsx` component.
-- **Purpose**: Defines the visual appearance of the main application structure.
-
-#### `App.jsx`
-- The main component that serves as the entry point for rendering the app's UI.
-- **Purpose**: Sets up the basic structure and renders child components.
-
-#### `Theme.js`
-- Contains theme-related configurations such as colors, fonts, or global styles.
-- **Purpose**: Provides a centralized way to manage the app's appearance and styling consistency.
-
-#### `examples.js`
-- Contains predefined example scripts or data for testing or showcasing features.
-- **Purpose**: Provides ready-to-use configurations to simplify onboarding and demonstration.
-
-#### `index.css`
-- Global stylesheet for the application.
-- **Purpose**: Defines base styles and resets applied across the entire app.
-
-#### `main.jsx`
-- The main entry point of the application.
-- **Purpose**: Initializes the app and renders the root component into the DOM.
 
 ### **How to Use the Structure**
 
@@ -238,8 +158,6 @@ The `src` directory contains the core files and folders that make up the project
 
 #### **Best Practices**
 - **Separation of Concerns**: Keep core logic (`compiler/`, `parser/`) and UI logic (`components/`) separate to maintain clarity and modularity.
-
-This paragraph provides an overview of the structure and a guide for contributors and maintainers to work efficiently with the project.
 
 
 ### Nearley.js - Domain Specific Language
@@ -277,7 +195,7 @@ In the `merlin` project, **Nearley.js** is utilized to parse a custom Domain-Spe
 4. **Rendering**
    - Mermaid.js renders the final visual diagram within the application interface.
 
-### Benefits of Using Nearley.js
+#### Benefits of Using Nearley.js
 
 - **Flexibility**: Nearley.js allows the creation of a robust and flexible grammar for parsing the custom DSL.
 - **Integration**: Seamlessly integrates with the application workflow to bridge the DSL and extended Mermaid.js.
