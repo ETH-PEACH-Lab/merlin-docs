@@ -43,7 +43,7 @@ color: [null, "red", null, "blue"]  // First and third elements use default colo
 ## Identifier Types
 
 ### `id`
-String identifier for nodes in graphs and trees. Can be any valid name without spaces.
+String identifier for nodes in graphs and trees. Can be any valid name without spaces, except the following reserved keywords: `page`, `array`, `matrix`, `graph`, `linkedlist`, `tree`, `stack`, `text` and `x`.
 
 ```merlin
 nodes: [nodeA, nodeB, nodeC, root, child1, child2]
