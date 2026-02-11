@@ -141,7 +141,6 @@ merlin/
 ├── .monacaignore           # Specifies files to exclude from Monaca's build process
 ├── LICENSE                 # License file (likely MIT) detailing usage rights
 ├── config.xml              # Configuration file for project settings (e.g., app metadata)
-├── langium-config.json     # Configuration for Langium, a framework for DSLs
 ├── package.json            # NPM package configuration file for managing dependencies
 ├── pnpm-lock.yaml          # Lockfile for pnpm, ensuring consistent dependency versions
 └── webpack.config.js       # Webpack configuration for building and bundling the app
@@ -243,13 +242,10 @@ The `src` directory contains the core files and folders that make up the project
 This paragraph provides an overview of the structure and a guide for contributors and maintainers to work efficiently with the project.
 
 
-## Domain Specific Language
-We use `langium` and `nearley.js` in this project as domain specific language engine. Here is a brief introduction of how to use this two language engine in our project. For detailed documentation, please refer to their official blogs.  
-[langium docs](https://langium.org/docs/introduction/)  
+### Nearley.js - Domain Specific Language
+We use `nearley.js` in this project as domain specific language engine. Here is a brief introduction of how to use this language engine in our project. For detailed documentation, please refer to the official blog.  
 [nearley.js docs](https://nearley.js.org/)
 
-
-### Nearley.js
 
 #### Usage of Nearley.js in the Merlin Project
 
@@ -258,16 +254,13 @@ In the `merlin` project, **Nearley.js** is utilized to parse a custom Domain-Spe
 #### Key Components Involving Nearley.js
 
 1. **Grammar Definition**
-   - The project includes a grammar file, typically named `merlin.ne`, which outlines the syntax rules of the custom DSL.
-   - This file defines how various elements of the DSL are structured and interpreted.
+   - The project includes a grammar file, named `merlin.ne`, which outlines the syntax rules of the custom DSL. This file defines how various elements of the DSL are structured and interpreted.
 
 2. **Parser Generation**
-   - Using Nearley.js, the grammar file is compiled into a parser.
-   - This parser reads the DSL input and converts it into an Abstract Syntax Tree (AST) or a similar intermediate representation.
+   - Using Nearley.js, the grammar file is compiled into a parser. This parser reads the DSL input and converts it into an Abstract Syntax Tree (AST) or a similar intermediate representation.
 
 3. **Integration with Mermaid.js**
-   - The output from the Nearley.js parser is transformed into merlin-lite by compiler.js.
-   - This transformation enables the rendering of visual elements defined by the custom DSL within the application.
+   - The output from the Nearley.js parser is transformed into merlin-lite by compiler.js. This transformation enables the rendering of visual elements defined by the custom DSL within the application.
 
 
 #### Workflow Overview
@@ -284,60 +277,13 @@ In the `merlin` project, **Nearley.js** is utilized to parse a custom Domain-Spe
 4. **Rendering**
    - Mermaid.js renders the final visual diagram within the application interface.
 
-#### Benefits of Using Nearley.js
+### Benefits of Using Nearley.js
 
 - **Flexibility**: Nearley.js allows the creation of a robust and flexible grammar for parsing the custom DSL.
 - **Integration**: Seamlessly integrates with the application workflow to bridge the DSL and extended Mermaid.js.
 - **Dynamic Diagram Generation**: Provides a powerful way for users to create and visualize diagrams through textual input.
 
 
-### Usage of Langium in the Merlin Project
-
-Langium is a framework for building domain-specific languages (DSLs) and their accompanying toolchains. In the `merlin` project, Langium is used to facilitate the creation and processing of the custom DSL `merlin` and connect it to `mermaid.js`.
-
-
-#### Key Features of Langium in the Project
-
-1. **DSL Grammar Definition**
-   - Langium is used to define the grammar of the `merlin` DSL.
-   - The grammar specifies the syntax and structure of the DSL, enabling the application to interpret user inputs correctly.
-   - The grammar is defined in a `.langium` configuration file or DSL schema file.
-
-2. **Code Generation**
-   - Langium generates a parser, lexer, and other utilities based on the defined DSL grammar.
-   - This generated code is used by the application to process DSL inputs dynamically.
-
-3. **Syntax Validation**
-   - Langium provides built-in capabilities for validating the syntax of DSL inputs.
-   - Errors in the user-defined DSL (e.g., missing or invalid keywords) are caught and displayed in the editor, enhancing the user experience.
-
-4. **Integration with the Parsing Workflow**
-   - Langium integrates with the overall application pipeline to process DSL input, validate it, and transform it into a representation suitable for rendering.
-   - This representation is passed downstream (e.g., to a Nearley.js-based compiler or directly to rendering logic).
-
-#### Workflow Overview
-
-1. **Grammar Definition**
-   - A grammar `.langium` file is defined in Langium, specifying the rules of the `merlin` DSL.
-
-2. **Parser Generation**
-    - run command `pnpm run build` to generate parser 
-   - Langium generates the parser and other utilities required to process DSL inputs based on the grammar.
-
-3. **User Input**
-   - Users write DSL definitions in the editor. Langium validates the syntax in real time and provides suggestions or error messages.
-
-4. **Processing**
-   - Valid DSL inputs are parsed into an Abstract Syntax Tree (AST) or a similar structured representation.
-
-5. **Output**
-   - The processed DSL is transformed into a format compatible with rendering tools such as Mermaid.js.
-
-#### Benefits of Using Langium in Merlin
-
-- **Simplified DSL Development**: Langium automates much of the work involved in creating and maintaining the DSL grammar and toolchain.
-- **Robust Error Handling**: Langium catches and reports syntax errors early, reducing potential issues downstream.
-- **Extensibility**: The Langium framework can be extended to add new features to the DSL or enhance the editor experience.
 
 ## Related Projects
 As part of this project, we collected 400 algorithm intuition slides. <br />
