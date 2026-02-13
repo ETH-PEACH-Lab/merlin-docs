@@ -21,6 +21,9 @@ const Svg: Dictionary<React.ComponentType<React.ComponentProps<'svg'>>> = {
     "remove-subtree": require('@site/static/img/remove-subtree.svg').default,
     "structure": require('@site/static/img/structure.svg').default,
     "text": require('@site/static/img/text.svg').default,
+    "export": require('@site/static/img/export.svg').default,
+    "share": require('@site/static/img/share.svg').default,
+    "save": require('@site/static/img/save.svg').default,
 };
 
 type HeaderItem = {
