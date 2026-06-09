@@ -22,9 +22,10 @@ overrideSize={true}
     block Encoder: [
         layout: vertical,
         gap: 40,
+
         nodes: [
-            input = type: rect label.text: "Input"
-            conv = type: stacked shape: 32x32x3 label.text: "Conv"
+            input = type: rect label.text: "Input",
+            conv = type: stacked shape: 8x128x128 label.text: "Conv"
         ],
 
         edges: [
@@ -34,7 +35,6 @@ overrideSize={true}
         groups: [
             row0 = members: [input, conv] layout: horizontal
         ]
-
     ]
 
     diagram: [
@@ -72,12 +72,16 @@ A block is a reusable part of an architecture. It can contain nodes, edges, and 
 block BlockName: [
     layout: vertical,
     gap: 40,
+
     nodes: [
         node0 = type: rect
+        node1 = type: rect
     ],
+
     edges: [
         e0 = node0.right -> node1.left
     ],
+
     groups: [
         row0 = members: [node0, node1]
     ]
@@ -128,7 +132,7 @@ Example:
 ```merlin
 nodes: [
     input = type: rect label.text: "Input"
-    conv = type: stacked shape: 32x32x3 color: "blue"
+    conv = type: stacked shape: 8x64x64 color: "blue"
 ]
 ```
 
@@ -247,13 +251,9 @@ overrideSize={true}
         gap: 30,
         nodes: [
             input = type: rect label.text: "Input",
-            hidden = type: circle label.text: "Hidden",
+            hidden = type: circle label.text: "Hidden" size: (50, 50),
             output = type: rect label.text: "Output"
         ]
-    ]
-
-    diagram: [
-        uses: [l = Layer]
     ]
 
 }
@@ -279,8 +279,8 @@ overrideSize={true}
         layout: horizontal,
         gap: 40,
         nodes: [
-            input = type: stacked shape: 32x32x3 label.text: "Input",
-            conv = type: stacked shape: 28x28x16 label.text: "Conv"
+            input = type: stacked shape: 4x32x32 label.text: "Input",
+            conv = type: stacked shape: 12x128x128 label.text: "Conv"
         ],
         edges: [
             e0 = input.right -> conv.left
@@ -304,26 +304,24 @@ diagramWidth={500}
 diagramHeight={250}
 overrideSize={true}
 
-> {`
-> architecture fullyConnectedExample = {
+> {`architecture fullyConnectedExample = {
 
     block Classifier: [
         layout: horizontal,
         gap: 40,
         nodes: [
-            fc = type: fullyConnected shape: [4, 3, 2] label.text: "FC",
-            out = type: rect label.text: "Output"
+            out = type: rect label.text: "Output",
+            fc = type: fullyConnected shape: [4, 3, 2] label.text: "FC" outputLabels: ["f1", "f2"]
         ],
         edges: [
-            e0 = fc.right -> out.left
+            e0 = out.right -> fc.left
         ]
     ]
 
 }
 
 page
-show fullyConnectedExample
-`}
+show fullyConnectedExample`}
 </SideBySide>
 
 ## Edges
@@ -342,7 +340,6 @@ Example:
 edges: [
     e0 = a.right -> b.left
     e1 = e0.mid -> c.top
-    e2 = input.right[0] -> hidden.left[1]
 ]
 ```
 
@@ -357,6 +354,46 @@ edges: [
 | start  | Uses the start point of an existing edge as the connection point  |
 | mid    | Uses the middle point of an existing edge as the connection point |
 | end    | Uses the end point of an existing edge as the connection point    |
+
+### Indexed Ports
+
+Anchors can also use an optional index, written as `[0]`, `[1]`, `[2]`, and so on. Supported indices range from `[0]` to `[10]`
+
+<SideBySide
+language="merlin"
+bordered={true}
+diagramWidth={500}
+diagramHeight={250}
+overrideSize={true}
+
+> {`architecture IndexedPortsExample = {
+
+    block Classifier: [
+        layout: horizontal,
+        gap: 40,
+        nodes: [
+            input = type: rect,
+            hidden = type: rect
+        ],
+        edges: [
+            e0 = input.right[0] -> hidden.left[0],
+            e1 = input.right[1] -> hidden.left[1],
+            e2 = input.right[2] -> hidden.left[2],
+            e3 = input.right[3] -> hidden.left[3],
+            e4 = input.right[4] -> hidden.left[4],
+            e5 = input.right[5] -> hidden.left[5],
+            e6 = input.right[6] -> hidden.left[6],
+            e7 = input.right[7] -> hidden.left[7],
+            e8 = input.right[8] -> hidden.left[8],
+            e9 = input.right[9] -> hidden.left[9],
+            e10 = input.right[10] -> hidden.left[10]
+        ]
+    ]
+
+}
+page
+show IndexedPortsExample`}
+</SideBySide>
 
 ### Edge Properties
 
@@ -373,7 +410,7 @@ edges: [
 | width                    | `number`                                             | Width of edge width                                                                                                                                                                                                          |
 | bidirectional            | `boolean`                                            | Draws the edge in both directions                                                                                                                                                                                            |
 | headOnly                 | `boolean`                                            | Shows only the arrow head                                                                                                                                                                                                    |
-| alignToIndexedPort       | `boolean`                                            | Aligns edge to indexed ports                                                                                                                                                                                                 |
+| alignToIndexedPort       | `boolean`                                            | Aligns the connected elements by their selected indexed ports, such as `right[1]` and `left[5]`                                                                                                                              |
 | label.text               | `string \| null`                                     | Edge label text                                                                                                                                                                                                              |
 | label.fontColor          | `string \| null`                                     | Label font color                                                                                                                                                                                                             |
 | label.fontFamily         | `string \| null`                                     | Label font family                                                                                                                                                                                                            |
@@ -458,7 +495,7 @@ overrideSize={true}
             c = type: rect label.text: "V"
         ],
         groups: [
-            row0 = members: [a, b, c] marker.type: brace marker.position: top marker.text: "Attention" marker.color: "black"
+            row0 = members: [a, b, c] marker.type: brace marker.position: top marker.text: "Attention" marker.color: "black" marker.shift.bottom: -30
         ]
     ]
 
