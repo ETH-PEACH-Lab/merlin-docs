@@ -1,9 +1,10 @@
-
+```yaml
 name: Update Dependencies and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -12,63 +13,54 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   update-dependencies:
     runs-on: ubuntu-latest
+
     outputs:
       changes-made: ${{ steps.check-changes.outputs.changes-made }}
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '18'
+          node-version: "20"
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
-          version: 9
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          version: 10.32.0
+          cache: true
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --dangerously-allow-all-builds
 
-      - name: Update mermaid-merlin package
-        run: pnpm up @eth-peach-lab/mermaid-merlin --latest
+      - name: Update Merlin dependencies
+        run: |
+          pnpm up \
+            @eth-peach-lab/mermaid-merlin \
+            @eth-peach-lab/merlin \
+            --latest \
+            --dangerously-allow-all-builds
 
-      - name: Update merlin package
-        run: pnpm up @eth-peach-lab/merlin --latest
-
-      - name: Check for changes in lock file
+      - name: Check for dependency changes
         id: check-changes
         run: |
-          if git diff --quiet pnpm-lock.yaml; then
-            echo "changes-made=false" >> $GITHUB_OUTPUT
-            echo "No changes to pnpm-lock.yaml"
+          if git diff --quiet package.json pnpm-lock.yaml; then
+            echo "changes-made=false" >> "$GITHUB_OUTPUT"
+            echo "No dependency changes"
           else
-            echo "changes-made=true" >> $GITHUB_OUTPUT
-            echo "Changes detected in pnpm-lock.yaml"
+            echo "changes-made=true" >> "$GITHUB_OUTPUT"
+            echo "Dependency changes detected"
           fi
 
       - name: Commit and push changes
@@ -76,60 +68,55 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add pnpm-lock.yaml
-          git commit -m "chore: update @eth-peach-lab/mermaid-merlin and @eth-peach-lab/merlin to latest version"
+          git add package.json pnpm-lock.yaml
+          git commit -m "chore: update Merlin dependencies"
           git push
 
-  deploy:
+  build:
     needs: update-dependencies
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout latest main
+        uses: actions/checkout@v6
         with:
-          ref: ${{ github.ref }}
+          ref: main
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '18'
+          node-version: "20"
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
-          version: 9
-          run_install: false
-
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          version: 10.32.0
+          cache: true
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --dangerously-allow-all-builds
 
       - name: Build website
         run: pnpm build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./build
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+```
